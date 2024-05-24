@@ -1,0 +1,121 @@
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  html {
+    font-size: 45%;
+  }
+  /* HERO SECTION  */
+  .container_header {
+    background: transparent;
+    height: 100%;
+  }
+  .header {
+    height: 8rem;
+    padding: 0;
+  }
+  .header .logo_img {
+    margin-top: 2rem;
+  }
+  .header_nav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    transition: all 0.3s linear;
+  }
+  .header_nav-list {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header_nav-item {
+    margin: 3rem;
+  }
+  .header_nav-item a {
+    font-size: 5rem;
+  }
+  .header_button {
+    display: none;
+    flex-direction: column;
+  }
+  .header_nav.show {
+    transform: translateY(0%);
+  }
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  /* CARD PRICE  */
+  .courses_card_item:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  /* HERO SECTION  */
+  .header_nav-item a {
+    font-size: 3rem;
+  }
+  .courses_card_item:last-child {
+    display: block;
+  }
+  .hero_img {
+    display: none;
+  }
+  .hero_content {
+    width: 100%;
+    text-align: center;
+  }
+  .hero_content p {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero_content .content_button {
+    width: 100%;
+    justify-content: center;
+  }
+  .button_play {
+    margin-left: 1rem;
+  }
+  /* FETURE  */
+  .fetures_list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .fetures_list .fetures_list_item {
+    width: 100%;
+    align-items: center;
+  }
+  .fetures_list_item p {
+    max-width: 100%;
+    text-align: center;
+  }
+  .about_container_img {
+    display: none;
+  }
+  .buttons {
+    justify-content: end;
+  }
+  /* CTA  */
+  .cta_section_container {
+    flex-direction: column;
+  }
+
+  /* FOOTER  */
+  .footer_container {
+    margin-top: 0;
+  }
+  .container_menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .menu_product {
+    margin-top: 3rem;
+  }
+}
