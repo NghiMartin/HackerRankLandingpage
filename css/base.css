@@ -4,7 +4,7 @@
     --text-color: #2F3A3B;
     --text-title-color: #0D1111;
     --grey-color: #767E7E;
-    --primary-light-aquamarine: #1EBFC1;
+    --primary-light-aquamarine: #008294;
     --light-aquamarine: #DEF6F5;
     --sm: 576px;
     --md: 768px;
@@ -38,8 +38,7 @@ button{
     border-radius: 0.8rem;
 }
 button:hover{
-    background-color: rgb(13, 180, 180);
-
+    background-color:var(--primary-light-aquamarine);
 }
 h1{
     font-size: 5rem;

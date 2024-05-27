@@ -79,12 +79,30 @@ var home = document.getElementById('Home');
   }
   });
   
+  // HEADER 
   document.addEventListener("DOMContentLoaded", function () {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navMenu = document.querySelector('.header_nav');
-  
     hamburgerMenu.addEventListener('click', function () {
         navMenu.classList.toggle('show');
     });
   });
   
+  // DISTINATIONS 
+  document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".distination_item");
+    const windowHeight = window.innerHeight;
+
+    function checkVisible() {
+        sections.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            if (top < windowHeight * 0.5) {
+                section.classList.add("show");
+            } else {
+                section.classList.remove("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkVisible);
+});
