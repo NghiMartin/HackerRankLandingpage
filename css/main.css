@@ -70,7 +70,6 @@
 }
 
 .header_nav-item a:hover {
-  color: var(--white-color);
   /* font-weight: bold; */
   background-color: transparent;
 }
@@ -305,6 +304,7 @@
   width: 80%;
   margin: auto;
 }
+
 .foods_container_content {
   display: flex;
   justify-content: space-between;
@@ -328,84 +328,91 @@
 
 .foods_list_card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
   margin-top: 10rem;
   gap: 2rem;
 }
 
 .foods_card_item {
-  margin-top: 6rem;
+  margin-top: 5rem;
   width: 100%;
-  position: relative;
+  box-shadow: rgba(229, 229, 229, 0.1) 0px 1px 1px 0px inset,
+  rgba(214, 214, 222, 0.25) 0px 50px 100px -20px,
+  rgba(183, 182, 182, 0.3) 0px 30px 60px -30px;
 }
 .foods_card_item .card_item_img {
   width: 100%;
-  border-radius: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
   overflow: hidden;
 }
-.foods_card_item img {
+.foods_card_item .card_item_img img {
   width: 100%;
   overflow: hidden;
-  height: 30rem;
-  transition: all 0.3s ease;
+  height: 16rem;
+  transition: all 0.5s ease;
 }
-.foods_card_item img:hover {
+.foods_card_item .card_item_img img:hover {
   scale: 1.2;
 }
-.card_item_bottom {
-  position: absolute;
-  width: 90%;
+.card_item_content {
+  width: 100%;
   text-align: start;
   background-color: #ffffff;
-  bottom: -5rem;
-  left: 50%;
-  transform: translate(-50%, 0);
-  border-radius: 1rem;
   padding: 1.3rem;
   line-height: 2rem;
-  box-shadow: rgba(229, 229, 229, 0.1) 0px 1px 1px 0px inset,
-    rgba(214, 214, 222, 0.25) 0px 50px 100px -20px,
-    rgba(183, 182, 182, 0.3) 0px 30px 60px -30px;
 }
 
-.card_item_bottom .item_fee {
-  margin-top: 1.3rem;
-}
-
-.card_item_bottom .price {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: black;
-}
-
-.card_item_bottom .text_dots {
-  margin-top: 1.3rem;
+.card_item_content .item_location {
+  margin: 1.3rem 0 1.3rem 0;
   display: flex;
-  width: 20rem;
-  justify-content: space-between;
+  justify-content: start;
+  align-items: center;
 }
 
-.text_dots .text {
-  width: 9rem;
+.card_item_content .item_location strong {
+  margin-left: 0.5rem;
+  display: -webkit-box;          
+  -webkit-box-orient: vertical;   /* Thiết lập hướng dọc */
+  overflow: hidden;               /* Ẩn nội dung tràn */
+  text-overflow: ellipsis;        /* Thêm dấu ba chấm cho nội dung tràn */
+  -webkit-line-clamp: 1;          /* Giới hạn số dòng hiển thị */
+  max-width: 30rem;  
+}
+
+.card_item_content .item_location img {
+  width: 3rem;
+  height: 2rem;
+}
+.card_item_content .decription{
+  text-align: left;
+  display: -webkit-box;          
+  -webkit-box-orient: vertical;   /* Thiết lập hướng dọc */
+  overflow: hidden;               /* Ẩn nội dung tràn */
+  text-overflow: ellipsis;        /* Thêm dấu ba chấm cho nội dung tràn */
+  -webkit-line-clamp: 3;          /* Giới hạn số dòng hiển thị */
+  max-width: 30rem;  
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.btn_view_more {
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 12rem;
 }
-
-.text_dots .dot {
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  background-color: var(--primary-light-aquamarine);
+.btn_view_more:hover{
+  opacity: 0.7;
+  transition: all 0.4s ease;
 }
+.btn_view_more img{
+  width: 100%;
+  height: 2.272rem;
 
-.coutdown_section_container {
-  width: 70%;
-  margin: auto;
-  margin-top: 15rem;
-  margin-bottom: 15rem;
-  display: flex;
-  justify-content: space-between;
+}
+.btn_view_more p{
+  font-weight: bold;
+  color: var(--primary-light-aquamarine);
 }
 .counter {
   opacity: 0;

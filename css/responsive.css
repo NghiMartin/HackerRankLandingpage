@@ -36,6 +36,7 @@
   }
   .header_nav-item a {
     font-size: 5rem;
+    color: black;
   }
   .header_button {
     display: none;
@@ -49,10 +50,7 @@
     flex-direction: column;
     justify-content: space-around;
   }
-  /* CARD PRICE  */
-  .courses_card_item:last-child {
-    display: none;
-  }
+
 }
 
 @media (max-width: 576px) {

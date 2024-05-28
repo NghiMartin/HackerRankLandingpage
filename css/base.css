@@ -37,9 +37,7 @@ button{
     padding: 1rem;
     border-radius: 0.8rem;
 }
-button:hover{
-    background-color:var(--primary-light-aquamarine);
-}
+
 h1{
     font-size: 5rem;
     line-height: 4rem;
