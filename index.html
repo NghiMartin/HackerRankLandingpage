@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
 </head>
 <body>
     <!-- HERO SECTION  -->
@@ -30,7 +32,7 @@
                             <a class="header_nav-link" href="#Distinations">Distinations</a>
                         </li>
                         <li class="header_nav-item">
-                            <a class="header_nav-link" href="#About">Foods</a>
+                            <a class="header_nav-link" href="#Foods">Foods</a>
                         </li>
                         <li class="header_nav-item">
                             <a class="header_nav-link" href="#Contact">FeedBacks</a>
@@ -64,12 +66,35 @@
                 </div>
             </div>
     </section>
+    <!-- ABOUT US  -->
+    <div data-aos="fade-up">
+    <section class="reviews-section">
+            <div class="reviews-section-container">
+                <h2>About us</h2>
+                <div class="blockquote_icon">
+                <img src="img/blockquote_icon.png" alt="">
+                </div>
+                <blockquote id="review-text">
+                    <p>The tours in this website are great. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptas consectetur quam, quo nisi cum quod commodi ut? Aspernatur ratione obcaecati explicabo voluptates eos laborum repudiandae molestias totam aut est! I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my friend to join this company!</p>
+                    <div class="info">Ali Tufan<br><span>Product Manager, Apple Inc.</span></div>
+                </blockquote>
+                <div class="avatars">
+                    <img src="img/Ellipse 175.png" alt="Avatar 1" class="avatar active" onclick="showReview('review1')">
+                    <img src="img/Ellipse 175.png" alt="Avatar 2" class="avatar" onclick="showReview('review2',event)">
+                    <img src="img/Ellipse 175.png" alt="Avatar 3" class="avatar" onclick="showReview('review3',event)">
+                    <img src="img/Ellipse 175.png" alt="Avatar 4" class="avatar" onclick="showReview('review4',event)">
+                    <img src="img/Ellipse 175.png" alt="Avatar 5" class="avatar" onclick="showReview('review5',event)">
+                </div>
+               </div>
+     </section>
+    </div>
+    
     <!-- FETURES  -->
     <section id="Distinations" class="distinations_section">
         <div class="distinations_container">
             <div class="distinations_container_content">
                 <p>D I S T I N A T I O N S</p>
-                <h2>We are providing suitable features for students.</h2>
+                <h2>Hãy cùng chúng tôi khám phá các địa danh nổi tiếng ở Đà Nẵng</h2>
                 <p>Read our awesome feature that is absolutely suit for you. Explore the feature and know the best.</p>
             </div>
         <div class="distination_item">
@@ -78,29 +103,25 @@
             </div>
             <div class="line_list">
                 <img src="img/list_icon_dropdown.png" alt="">
-                </div>
+            </div>
             <div class="content">
                 <h2>Top các cây cầu của Đà Nẵng</h2>
                 <div class="content_list">
                     <div class="content_list_text">
                         <img src="img/circle_stroke.png" alt="">
-                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque atque ipsam repellendus rerum! Aperiam iste dolor veniam laudantium repudiandae dolores necessitatibus pariatur id unde, molestias ipsa, ipsum qui dolorem. ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                        <p><strong>Cầu Trần Thị Lý: </strong><br>● Được khởi công xây dựng lại và hoàn thành vào năm 2013. <br>● Cầu Trần Thị Lý nằm ở vị trí chiến lược, bắc qua sông Hàn, nối liền hai bờ của thành phố Đà Nẵng. <br>● Cầu có một nhịp chính dài 731 mét và có độ cao 145 mét. <br>●	Vẻ đẹp của cầu Trần Thị Lý nằm ở thiết kế hiện đại và tinh tế.   
                     </div>
                     <div class="content_list_text">
                         <img src="img/circle_stroke.png" alt="">
-                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque atque ipsam repellendus rerum! Aperiam iste dolor veniam laudantium repudiandae dolores necessitatibus pariatur id unde, molestias ipsa, ipsum qui dolorem. ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                        <p><strong>Cầu Sông Hàn: </strong>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque atque ipsam repellendus rerum! Aperiam iste dolor veniam laudantium repudiandae dolores necessitatibus pariatur id unde, molestias ipsa, ipsum qui dolorem. ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
                     </div>
                     <div class="content_list_text">
                         <img src="img/circle_stroke.png" alt="">
-                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                        <p><strong>Cầu Rồng: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
                     </div>
                     <div class="content_list_text">
                         <img src="img/circle_stroke.png" alt="">
-                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
-                    </div>
-                    <div class="content_list_text">
-                        <img src="img/circle_stroke.png" alt="">
-                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                        <p><strong>Cầu Thuận Phước: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
                     </div>
                 </div>
             </div>
@@ -117,7 +138,7 @@
                 <div class="content_list">
                     <div class="content_list_text">
                         <img src="img/circle_stroke.png" alt="">
-                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                        <p><strong>Cầu Trần Thị Lý: </strong> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
                     </div>
                     <div class="content_list_text">
                         <img src="img/circle_stroke.png" alt="">
@@ -332,6 +353,82 @@
         </div>
     </section>
    
+    <!-- RATE SECTION  -->
+    <section id="Rate" class="rate-section">
+       <div class="rate-section_content">
+        <h2>Trusted by Thousands of Happy Customer</h2>
+        <p>These are the stories of our customers who have joined us with great pleasure when using this crazy feature.</p>
+       </div>
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <div class="card-items active">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Soobin Hoang Sơn</h3><p>Shanxi,China</p></div>
+                            <div class="start">4.5 <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+                  <div class="item">
+                    <div class="card-items">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Elisa</h3><p>Shanxi,China</p></div>
+                            <div class="start"><span>4.5</span> <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card-items">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Elisa</h3><p>Shanxi,China</p></div>
+                            <div class="start"><span>4.5</span> <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card-items">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Elisa</h3><p>Shanxi,China</p></div>
+                            <div class="start"><span>4.5</span> <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card-items">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Elisa</h3><p>Shanxi,China</p></div>
+                            <div class="start"><span>4.5</span> <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="buttons">
+                <button id="prev"><img src="img/prev.png" alt=""></button>
+                <button id="next"><img src="img/next.png" alt=""></button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+      </section>
+    
+
+
     <!-- CONTACT  -->
     <section id="Contact" class="cta_section">
         <div class="cta_section_container">
@@ -388,7 +485,33 @@
         <p style="text-align: center; margin-top: 3rem;">© Copyright 2024 by NguyenBaNghi. All right reserved.</p>
 
     </footer>
-
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 1000, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+
+      });
+    </script>
 </body>
 </html>

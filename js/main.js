@@ -106,3 +106,102 @@ var home = document.getElementById('Home');
 
     window.addEventListener("scroll", checkVisible);
 });
+
+
+
+
+let slider = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.slider .dots li');
+let cards = document.querySelectorAll('.card-items');
+let lengthItems = items.length - 1;
+let active = 0;
+next.onclick = function(){
+    active = active + 1 <= lengthItems ? active + 1 : 0;
+    reloadSlider();
+}
+prev.onclick = function(){
+    active = active - 1 >= 0 ? active - 1 : lengthItems;
+    reloadSlider();
+}
+let refreshInterval = setInterval(()=> {next.click()}, 3000);
+function reloadSlider(){
+    slider.style.left = -items[active].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slider .dots li.active');
+    let last_active_card = document.querySelector('.card-items.active');
+    last_active_dot.classList.remove('active');
+    last_active_card.classList.remove('active');
+    dots[active].classList.add('active');
+    cards[active].classList.add('active');
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 3000);
+}
+
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         active = key;
+         reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
+};
+
+//ABOUT US
+function showReview(reviewId, event) {
+  const reviews = {
+    review1: {
+      text: 'The tours in this website are great. I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my friend to join this company!',
+      name: 'Ali Tufan',
+      position: 'Product Manager, Apple Inc.'
+    },
+    review2: {
+      text: 'Amazing experience! The tours were well organized and the guides were very knowledgeable.',
+      name: 'John Doe',
+      position: 'Software Engineer, Google Inc.'
+    },
+    review3: {
+      text: 'A delightful trip with excellent service. Highly recommended!',
+      name: 'Jane Smith',
+      position: 'UX Designer, Facebook'
+    },
+    review4: {
+      text: 'Great tours and fantastic customer service. Will definitely use again!',
+      name: 'Mike Johnson',
+      position: 'Project Manager, Amazon'
+    },
+    review5: {
+      text: 'An unforgettable experience! The team took care of everything.',
+      name: 'Emily Davis',
+      position: 'Data Scientist, Microsoft'
+    }
+  };
+
+  // Cập nhật hiệu ứng avatar
+  document.querySelectorAll('.avatar').forEach(avatar => {
+    avatar.classList.remove('active');
+  });
+  event.target.classList.add('active');
+
+  // Thêm lớp fade-out trước khi thay đổi nội dung
+  const reviewText = document.getElementById('review-text');
+  reviewText.classList.add('fade-out');
+
+  // Chờ cho hiệu ứng fade-out hoàn thành, sau đó thay đổi nội dung và thêm lớp fade-in
+  setTimeout(() => {
+    reviewText.querySelector('p').innerText = reviews[reviewId].text;
+    reviewText.querySelector('footer').innerHTML = `${reviews[reviewId].name}<br><span>${reviews[reviewId].position}</span>`;
+
+    // Loại bỏ lớp fade-out và thêm lớp fade-in
+    reviewText.classList.remove('fade-out');
+    reviewText.classList.add('fade-in');
+    
+    // Loại bỏ lớp fade-in sau một khoảng thời gian để chuẩn bị cho lần thay đổi tiếp theo
+    setTimeout(() => {
+      reviewText.classList.remove('fade-in');
+    }, 500);
+  }, 500);
+}
