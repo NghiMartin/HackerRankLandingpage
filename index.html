@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
 </head>
 <body>
     <!-- HERO SECTION  -->
-    <button onclick=""></button>
     <section id="Home" class="hero_section">
         <header class="header">
             <div class="container_header">
@@ -25,13 +26,16 @@
                             <a class="header_nav-link" href="#Home">Home</a>
                         </li>
                         <li class="header_nav-item">
-                            <a class="header_nav-link" href="#Features">Features</a>
+                            <a class="header_nav-link" href="#Distinations">About us</a>
                         </li>
                         <li class="header_nav-item">
-                            <a class="header_nav-link" href="#Pricing">Pricing</a>
+                            <a class="header_nav-link" href="#Distinations">Distinations</a>
                         </li>
                         <li class="header_nav-item">
-                            <a class="header_nav-link" href="#About">About</a>
+                            <a class="header_nav-link" href="#Foods">Foods</a>
+                        </li>
+                        <li class="header_nav-item">
+                            <a class="header_nav-link" href="#Contact">FeedBacks</a>
                         </li>
                         <li class="header_nav-item">
                             <a class="header_nav-link" href="#Contact">Contact</a>
@@ -40,7 +44,6 @@
  
                 </nav>
                 <div class="header_button">
-                    <button class="header_span-signin">Sign in</button>
                     <button class="header_button-signup">Sign up</button>
                 </div>
                 <div class="hamburger-menu">
@@ -51,167 +54,381 @@
             </div>
         </header>
         <div class="hero_section_main">
-            <div class="hero_content">
-                <span class="content_list">
-                    <p>😎 EASY LEAENING PLATFORM</p>
-                    <h1>Words learner <br> come here.</h1>
-                    <p>Build skills with courses, certificates, and get online knowledge from our world-class platform.</p>
-                </span>
-                <div class="content_button">
-                    <button>Get Started</button>
-                    <div class="button_play">
-                        <img src="img/vector1.png" alt="">
+            <div class="banner">
+                <video autoplay loop muted plays-inline>
+                    <source src="video_Da_Nang.mp4" type="video/mp4">
+                </video>
+                <div class="content">
+                    <h1>EXPLORE DA NANG CITY WITH <br> HACKER RANK</h1>
+                    <div>
+                        <button type="button">Explore</button>
                     </div>
                 </div>
             </div>
-            <div class="hero_img">
-                <img class="hero_img_main" src="img/img_main_hero.png" alt="">
-                <img class="hero_img_courses" src="img/cart_courses.png" alt=""> 
-                <img class="hero_img_schedules" src="img/card_schedules.png" alt="">
-                <img class="hero_img_students" src="img/card_students.png" alt="">
-            </div>
-        </div>
     </section>
+    <!-- ABOUT US  -->
+    <div data-aos="fade-up">
+    <section class="reviews-section">
+            <div class="reviews-section-container">
+                <h2>About us</h2>
+                <div class="blockquote_icon">
+                <img src="img/blockquote_icon.png" alt="">
+                </div>
+                <blockquote id="review-text">
+                    <p>The tours in this website are great. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptas consectetur quam, quo nisi cum quod commodi ut? Aspernatur ratione obcaecati explicabo voluptates eos laborum repudiandae molestias totam aut est! I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my friend to join this company!</p>
+                    <div class="info">Ali Tufan<br><span>Product Manager, Apple Inc.</span></div>
+                </blockquote>
+                <div class="avatars">
+                    <img src="img/Ellipse 175.png" alt="Avatar 1" class="avatar active" onclick="showReview('review1')">
+                    <img src="img/Ellipse 175.png" alt="Avatar 2" class="avatar" onclick="showReview('review2',event)">
+                    <img src="img/Ellipse 175.png" alt="Avatar 3" class="avatar" onclick="showReview('review3',event)">
+                    <img src="img/Ellipse 175.png" alt="Avatar 4" class="avatar" onclick="showReview('review4',event)">
+                    <img src="img/Ellipse 175.png" alt="Avatar 5" class="avatar" onclick="showReview('review5',event)">
+                </div>
+               </div>
+     </section>
+    </div>
+    
     <!-- FETURES  -->
-    <section id="Features" class="fetures_section">
-        <div class="fetures_container">
-            <div class="fetures_container_content">
-                <p>FETURES</p>
-                <h2>We are providing suitable features for students.</h2>
+    <section id="Distinations" class="distinations_section">
+        <div class="distinations_container">
+            <div class="distinations_container_content">
+                <p>D I S T I N A T I O N S</p>
+                <h2>Hãy cùng chúng tôi khám phá các địa danh nổi tiếng ở Đà Nẵng</h2>
                 <p>Read our awesome feature that is absolutely suit for you. Explore the feature and know the best.</p>
             </div>
-            <div class="fetures_list">
-                <div class="fetures_list_item">
-                    <img src="img/icon_live.png" alt="">
-                    <h4>Live Class</h4>
-                    <p>We are providing live classes with the best teacher for you</p>
+        <div class="distination_item">
+            <div class="imgBx">
+                <img src="img/top_bridge_da_nang.png" alt="ba na image">
+            </div>
+            <div class="line_list">
+                <img src="img/list_icon_dropdown.png" alt="">
+            </div>
+            <div class="content">
+                <h2>Top các cây cầu của Đà Nẵng</h2>
+                <div class="content_list">
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong><br>● Được khởi công xây dựng lại và hoàn thành vào năm 2013. <br>● Cầu Trần Thị Lý nằm ở vị trí chiến lược, bắc qua sông Hàn, nối liền hai bờ của thành phố Đà Nẵng. <br>● Cầu có một nhịp chính dài 731 mét và có độ cao 145 mét. <br>●	Vẻ đẹp của cầu Trần Thị Lý nằm ở thiết kế hiện đại và tinh tế.   
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Sông Hàn: </strong>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque atque ipsam repellendus rerum! Aperiam iste dolor veniam laudantium repudiandae dolores necessitatibus pariatur id unde, molestias ipsa, ipsum qui dolorem. ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Rồng: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Thuận Phước: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
                 </div>
-                <div class="fetures_list_item">
-                    <img src="img/icon_discuss.png" alt="">
-                    <h4>Discuss</h4>
-                    <p>Conversation with teachers or another students about task or any other thing</p>
+            </div>
+        </div>
+        <div class="distination_item">
+            <div class="imgBx">
+                <img src="img/top_bridge_da_nang.png" alt="ba na image">
+            </div>
+            <div class="line_list">
+            <img src="img/list_icon_dropdown.png" alt="">
+            </div>
+            <div class="content">
+                <h2>Cầu rồng Đà Nẵng</h2>
+                <div class="content_list">
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto quae maiores nostrum corporis a, est praesentium! Consequuntur enim corporis ut corrupti accusamus in sunt architecto blanditiis et autem. Dolorum! dolor sit amet con
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
                 </div>
-                <div class="fetures_list_item">
-                    <img src="img/icon_task.png" alt="">
-                    <h4>Task</h4>
-                    <p>We give every of our students task for gathering knowledge at home</p>
+            </div>
+        </div>
+        <div class="distination_item">
+            <div class="imgBx">
+                <img src="img/top_bridge_da_nang.png" alt="ba na image">
+            </div>
+            <div class="line_list">
+            <img src="img/list_icon_dropdown.png" alt="">
+            </div>
+            <div class="content">
+                <h2>Cầu rồng Đà Nẵng</h2>
+                <div class="content_list">
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque atque ipsam repellendus rerum! Aperiam iste dolor veniam laudantium repudiandae dolores necessitatibus pariatur id unde, molestias ipsa, ipsum qui dolorem. ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="distination_item">
+            <div class="imgBx">
+                <img src="img/top_bridge_da_nang.png" alt="ba na image">
+            </div>
+            <div class="line_list">
+            <img src="img/list_icon_dropdown.png" alt="">
+            </div>
+            <div class="content">
+                <h2>Cầu rồng Đà Nẵng</h2>
+                <div class="content_list">
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque atque ipsam repellendus rerum! Aperiam iste dolor veniam laudantium repudiandae dolores necessitatibus pariatur id unde, molestias ipsa, ipsum qui dolorem. ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="distination_item">
+            <div class="imgBx">
+                <img src="img/top_bridge_da_nang.png" alt="ba na image">
+            </div>
+            <div class="line_list">
+            <img src="img/list_icon_dropdown.png" alt="">
+            </div>
+            <div class="content">
+                <h2>Cầu rồng Đà Nẵng</h2>
+                <div class="content_list">
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque atque ipsam repellendus rerum! Aperiam iste dolor veniam laudantium repudiandae dolores necessitatibus pariatur id unde, molestias ipsa, ipsum qui dolorem. ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="distination_item">
+            <div class="imgBx">
+                <img src="img/top_bridge_da_nang.png" alt="ba na image">
+            </div>
+            <div class="line_list">
+            <img src="img/list_icon_dropdown.png" alt="">
+            </div>
+            <div class="content">
+                <h2>Cầu rồng Đà Nẵng</h2>
+                <div class="content_list">
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque atque ipsam repellendus rerum! Aperiam iste dolor veniam laudantium repudiandae dolores necessitatibus pariatur id unde, molestias ipsa, ipsum qui dolorem. ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Cầu Trần Thị Lý: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi error ratione itaque, iure officiis mollitia!        
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- PRICE  -->
-    <section id="Pricing" class="courses_section">
-        <div class="courses_section_container">
-            <div class="courses_container_content">
+    <section id="Foods" class="foods_section">
+        <div class="foods_section_container">
+            <div class="foods_container_content">
                 <div class="content_left">
-                    <p>COURSES</p>
-                    <h2>Popular Courses</h2>
-                    <p>Check out our most poular courses that suit for you. Here you can find your favourite one.</p>
+                    <p>FOODS</p>
+                    <h2>Popular foods</h2>
+                    <p>Check out our most poular foods that suit for you. Here you can find your favourite one.</p>
                 </div>
-                <span class="content_right">View All Courses</span>
+                <span class="content_right">View All foods</span>
             </div>
-            <div class="courses_list_card">
-                <div class="courses_card_item">
+            <div class="foods_list_card">
+                <div class="foods_card_item">
                     <div class="card_item_img" >
-                        <img src="img/img_design.png" alt="">
+                        <img src="img/cho-dem-helio-1.jpg" alt="">
                     </div>
-                    <div class="card_item_bottom">
-                        <h4>Web Design</h4>
-                        <p class ="item_fee">Fee <span class='price'>$200</span></p> 
-                        <p>Web design basic to higer level</p>
-                        <span class="text_dots">
-                            <div class="text">
-                                <div class="dot"></div>
-                                <p>40 Classes</p>
-                            </div>
-                            <div class="text">
-                                <div class="dot"></div>
-                                <p>3 Months</p>
-                            </div>
-                        </span>
+                    <div class="card_item_content">
+                        <h4>Chợ đêm Helio</h4>
+                        <p class ="item_location"> <img src="img/location.png" alt=""><strong>Đường 2/9, Bình Hiên, Hải Châu, Thành Phố Đà Nẵng</strong></p> 
+                        <p class="decription">Chợ đêm Helio nổi bật với không gian rộng rãi, được trang trí ánh sáng rực rỡ và phong cách thiết kế hiện đại. Những gian hàng được bày biện bắt mắt, kết hợp với âm nhạc sôi động</p>
                     </div>
+                    <button class="btn_view_more">
+                        <div class="btn_img">  <img src="img/icon_arrowright.png" alt=""></div>
+
+                        <p>Xem thêm</p>
+                    </button>
                 </div>
-                <div class="courses_card_item">
+                <div class="foods_card_item">
                     <div class="card_item_img" >
-                        <img src="img/icon_dev.png" alt="">
+                        <img src="img/cho-dem-helio-1.jpg" alt="">
                     </div>
-                    <div class="card_item_bottom">
-                        <h4>Web Development</h4>
-                        <p class ="item_fee">Fee <span class='price'>$200</span></p> 
-                        <p>Web development basic to higer level</p>
-                        <span class="text_dots">
-                            <div class="text">
-                                <div class="dot"></div>
-                                <p>30 Classes</p>
-                            </div>
-                            <div class="text">
-                                <div class="dot"></div>
-                                <p>5 Months</p>
-                            </div>
-                        </span>
+                    <div class="card_item_content">
+                        <h4>Chợ đêm Helio</h4>
+                        <p class ="item_location"> <img src="img/location.png" alt=""><strong>Đường 2/9, Bình Hiên, Hải Châu, Thành Phố Đà Nẵng</strong></p> 
+                        <p class="decription">Chợ đêm Helio nổi bật với không gian rộng rãi, được trang trí ánh sáng rực rỡ và phong cách thiết kế hiện đại. Những gian hàng được bày biện bắt mắt, kết hợp với âm nhạc sôi động</p>
                     </div>
+                    <button class="btn_view_more">
+                        <div class="btn_img">  <img src="img/icon_arrowright.png" alt=""></div>
+
+                        <p>Xem thêm</p>
+                    </button>
                 </div>
-                <div class="courses_card_item">
+                <div class="foods_card_item">
                     <div class="card_item_img" >
-                        <img src="img/img_UI.png" alt="">
+                        <img src="img/cho-dem-helio-1.jpg" alt="">
                     </div>
-                    <div class="card_item_bottom">
-                        <h4>Web Design</h4>
-                        <p class ="item_fee">Fee <span class='price'>$200</span></p> 
-                        <p>UI/UX design basic to higer level</p>
-                        <span class="text_dots">
-                            <div class="text">
-                                <div class="dot"></div>
-                                <p>50 Classes</p>
-                            </div>
-                            <div class="text">
-                                <div class="dot"></div>
-                                <p>4 Months</p>
-                            </div>
-                        </span>
+                    <div class="card_item_content">
+                        <h4>Chợ đêm Helio</h4>
+                        <p class ="item_location"> <img src="img/location.png" alt=""><strong>Đường 2/9, Bình Hiên, Hải Châu, Thành Phố Đà Nẵng</strong></p> 
+                        <p class="decription">Chợ đêm Helio nổi bật với không gian rộng rãi, được trang trí ánh sáng rực rỡ và phong cách thiết kế hiện đại. Những gian hàng được bày biện bắt mắt, kết hợp với âm nhạc sôi động</p>
                     </div>
+                    <button class="btn_view_more">
+                      <div class="btn_img"> 
+                         <img src="img/icon_arrowright.png" alt=""></div>
+                        <p>Xem thêm</p>
+                    </button>
+                </div>
+                <div class="foods_card_item">
+                    <div class="card_item_img" >
+                        <img src="img/cho-dem-helio-1.jpg" alt="">
+                    </div>
+                    <div class="card_item_content">
+                        <h4>Chợ đêm Helio</h4>
+                        <p class ="item_location"> <img src="img/location.png" alt=""><strong>Đường 2/9, Bình Hiên, Hải Châu, Thành Phố Đà Nẵng</strong></p> 
+                        <p class="decription">Chợ đêm Helio nổi bật với không gian rộng rãi, được trang trí ánh sáng rực rỡ và phong cách thiết kế hiện đại. Những gian hàng được bày biện bắt mắt, kết hợp với âm nhạc sôi động</p>
+                    </div>
+                    <button class="btn_view_more">
+                        <div class="btn_img">  <img src="img/icon_arrowright.png" alt=""></div>
+
+                        <p>Xem thêm</p>
+                    </button>
                 </div>
                 
             </div>
         </div>
     </section>
-    <!-- COUTDOWN  -->
-    <section class="coutdown_section">
-        <div class="coutdown_section_container">
-            <div class="coutdown">
-                <div class="text_coutdown"><h1 class="counter" id="100">0 <h1>+</h1></h1></div>
-                <p>Popular Courses</p>
-            </div>
-            <div class="coutdown">
-                <div class="text_coutdown"><h1 class="counter" id="500">0 <h1>+</h1></h1></div>
-
-                <p>Skilled Trainer</p>
-            </div>
-            <div class="coutdown">
-                <div class="text_coutdown"><h1 class="counter" id="1">0 <h1>M+</h1></h1></div>
-                <p>Student Learning</p>
-            </div>
-        </div>
-    </section>
-    <!-- RATE -->
-    <section id="About" class="about_section">
-    <div class="about_container">
-        <div class="about_container_text">
-             <img class="img_union" src="img/union.png" alt="">
-            <div class="text">
-                <span>“They are the best people. And this is the suitable platform to learn from distance.”</span>
-                <p><strong style="color: black;">- Ben Foakes,</strong> student.</p>
+   
+    <!-- RATE SECTION  -->
+    <section id="Rate" class="rate-section">
+       <div class="rate-section_content">
+        <h2>Trusted by Thousands of Happy Customer</h2>
+        <p>These are the stories of our customers who have joined us with great pleasure when using this crazy feature.</p>
+       </div>
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <div class="card-items active">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Soobin Hoang Sơn</h3><p>Shanxi,China</p></div>
+                            <div class="start">4.5 <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+                  <div class="item">
+                    <div class="card-items">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Elisa</h3><p>Shanxi,China</p></div>
+                            <div class="start"><span>4.5</span> <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card-items">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Elisa</h3><p>Shanxi,China</p></div>
+                            <div class="start"><span>4.5</span> <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card-items">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Elisa</h3><p>Shanxi,China</p></div>
+                            <div class="start"><span>4.5</span> <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card-items">
+                        <div class="card-top">
+                            <div class="top-avt"><img src="img/Ellipse 175.png" alt=""></div>
+                            <div class="info"><h3>Elisa</h3><p>Shanxi,China</p></div>
+                            <div class="start"><span>4.5</span> <img src="img/Vector.png" alt=""></div>
+                        </div>
+                        <p>“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. QuickVPN always the best”.</p>
+                    </div>
+                </div>
+    
             </div>
             <div class="buttons">
                 <button id="prev"><img src="img/prev.png" alt=""></button>
                 <button id="next"><img src="img/next.png" alt=""></button>
             </div>
-            </div>    
-            <div class="about_container_img">
-                <img src="img/slider_img.png" alt="">
-            </div>
-    </div>
-    </section>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+      </section>
+    
+
+
     <!-- CONTACT  -->
     <section id="Contact" class="cta_section">
         <div class="cta_section_container">
@@ -268,7 +485,33 @@
         <p style="text-align: center; margin-top: 3rem;">© Copyright 2024 by NguyenBaNghi. All right reserved.</p>
 
     </footer>
-
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 1000, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+
+      });
+    </script>
 </body>
 </html>
