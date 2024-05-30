@@ -205,3 +205,20 @@ function showReview(reviewId, event) {
     }, 500);
   }, 500);
 }
+
+
+// DISTINATIONS 
+// Lặp qua tất cả các phần tử .distination_item
+document.querySelectorAll('.distination_item').forEach(item => {
+
+  // Lấy chiều cao của phần tử .content bên trong mỗi .distination_item
+  var contentHeightContent = item.querySelector('.content').getBoundingClientRect().height;
+  
+  // Đặt chiều cao của dashed line bằng với chiều cao của nội dung
+  item.querySelector('.dashed-line').style.marginTop = 0+ 'px';
+  item.querySelector('.dashed-line').style.height = contentHeightContent - 30 +  'px';
+  
+  var contentHeightLine = item.querySelector('.dashed-line').getBoundingClientRect().height;
+
+  console.log({contentHeightLine});
+});

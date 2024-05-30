@@ -206,47 +206,50 @@
   }
 }
 /* ABOUT US  */
-
 .reviews-section {
-  margin-top: 7rem;
+  margin-top: 7rem; /* 70px */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(62, 93, 98,0.1);
-  height: 40rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
+  background-color: rgba(62, 93, 98, 0.1);
+  height: 40rem; 
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); 
 }
+
 .reviews-section-container {
   text-align: center;
-  padding: 20px;
-  height: 33rem;
+  padding: 2rem; 
+  height: 33rem; 
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
-.reviews-section .blockquote_icon img{
-  width: 3rem;
+
+.reviews-section .blockquote_icon img {
+  width: 0.3rem; 
   height: auto;
 }
-.review-text .info{
-  font-size: 0.9em;
+
+.review-text .info {
+  font-size: 0.09rem; 
   color: #555;
 }
+
 .reviews-section-container h2 {
   color: #3E5D62;
 }
 
-.review-text p,span {
+.review-text p,
+.review-text span {
   color: #3E5D62;
 }
 
 .reviews-section-container blockquote {
   font-style: italic;
   color: #333;
-  margin: 20px 0;
+  margin: 2rem 0; 
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s, transform 0.5s;
@@ -255,28 +258,27 @@
 .avatars {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 1.5rem;
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   cursor: pointer;
-  padding: 5px;
+  padding: 0.5rem; 
   transition: border 0.1s;
 }
 
 .avatar.active,
 .avatar:hover {
-  border: 3px solid #009cb1;
+  border: 0.3rem solid #009cb1; 
 }
 
 .fade-out {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(2rem); 
   transition: opacity 0.5s, transform 0.5s;
-
 }
 
 .fade-in {
@@ -292,12 +294,20 @@ position: relative;
   width: 100%;
   background-color: rgba(237, 251, 253,0.4);
   padding-top: 10rem;
-  
 }
 
 .distinations_container {
   padding: 0 10% 0 10%;
   margin: auto;
+}
+
+.bg_blur {
+  width: 100%;
+  z-index: 1;
+}
+.bg_blur img {
+  position: absolute;
+  height: auto;
 }
 .distinations_container_content {
   max-width: 60rem;
@@ -325,7 +335,7 @@ position: relative;
 
 .distination_item.show {
     transform: translateY(0);
-    opacity: 1; /* Hiện .distination_item khi được cuộn đến */
+    opacity: 1; 
 }
 .distination_item .imgBx
 {
@@ -346,27 +356,77 @@ position: relative;
     width: 90%;
     border-radius: 2rem;
     object-fit: cover;
+    z-index: 99;
 }
 .distination_item:nth-child(2n) .imgBx img {
     right: 10%;
 }
 
-.distination_item .line_list img {
+.distination_item .line_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.distination_item .line_list .circle_main {
     width: 4.2rem;
-    height: auto;
+    border-radius: 50%;
+    background-color: var(--primary-light-aquamarine);
+    height: 4.2rem;
+}
+
+.distination_item .line_list .dashed-line {
+  /* height: 160rem; */
+    border-left: 2px dashed var(--primary-light-aquamarine); 
 }
 .distination_item .content
 {
-   margin-bottom: 30rem;
+   /* margin-bottom: 30rem; */
    padding: 0.3rem;
 }
 .content h2{
   margin-top: -0.3rem;
 
 }
+
 .content .content_list{
     position: relative;
-    margin-top: 2rem;
+}
+
+.content_list_text .custom-list {
+  list-style: none;
+  padding-top: 2rem;
+}
+
+.content_list_text .custom-list li {
+  position: relative;
+  padding-right: 20px; 
+  margin-top: 2rem;
+}
+
+.custom-list li::before {
+  content: '';
+  position: absolute;
+  right: 0; 
+  top: 1.6rem;
+  transform: translateY(-50%);
+  width: 10px; 
+  height: 10px; 
+  background-color: var(--primary-light-aquamarine); 
+  border-radius: 50%; 
+  transition: all 0.3s ease;
+}
+
+.custom-list li:hover::before {
+  width: 13px; 
+  height: 13px; 
+}
+
+.distination_item:nth-child(2n) .custom-list li::before {
+  left: 0;
+}
+
+.distination_item:nth-child(2n) .custom-list li {
+  padding-left: 20px; 
 }
 .content .content_list_text img {
     position: absolute;
@@ -389,7 +449,7 @@ position: relative;
 }
 .content .content_list_text:hover {
   transition: all 0.5s ease-out;
-  opacity: 0.6;
+  opacity: 0.8;
   color: var(--primary-light-aquamarine);
 }
 .icon_airplane{
@@ -411,7 +471,9 @@ position: relative;
 }
 
 /* foods  */
-
+.foods_section{
+  /* margin-top: 10rem; */
+}
 .foods_section_container {
   padding-top: 10rem;
   width: 80%;

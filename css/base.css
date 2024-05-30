@@ -24,6 +24,8 @@ html {
     line-height: 1.6rem;
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
+    background-color: rgba(237, 251, 253,0.4);
+
 }
 
 img {
