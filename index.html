@@ -67,19 +67,19 @@
             </div>
     </section>
     <!-- ABOUT US  -->
-    <div id="AboutUs" data-aos="fade-up">
+    <!-- <div id="AboutUs" data-aos="fade-up"> -->
     <section  class="reviews-section">
             <div class="reviews-section-container">
                 <h2>About us</h2>
                 <div class="blockquote_icon">
                 <img src="img/blockquote_icon.png" alt="">
                 </div>
-                <blockquote id="review-text">
-                    <p>The tours in this website are great. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptas consectetur quam, quo nisi cum quod commodi ut? Aspernatur ratione obcaecati explicabo voluptates eos laborum repudiandae molestias totam aut est! I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my friend to join this company!</p>
+                <blockquote class="review-text">
+                    <p>The tours in this website are great. I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my friend to join this company!</p>
                     <div class="info">Ali Tufan<br><span>Product Manager, Apple Inc.</span></div>
                 </blockquote>
                 <div class="avatars">
-                    <img src="img/Ellipse 175.png" alt="Avatar 1" class="avatar active" onclick="showReview('review1')">
+                    <img src="img/Ellipse 175.png" alt="Avatar 1" class="avatar active" onclick="showReview('review1',event)">
                     <img src="img/Ellipse 175.png" alt="Avatar 2" class="avatar" onclick="showReview('review2',event)">
                     <img src="img/Ellipse 175.png" alt="Avatar 3" class="avatar" onclick="showReview('review3',event)">
                     <img src="img/Ellipse 175.png" alt="Avatar 4" class="avatar" onclick="showReview('review4',event)">
@@ -87,7 +87,7 @@
                 </div>
                </div>
      </section>
-    </div>
+    <!-- </div> -->
     
     <!-- Distinations  -->
     <section id="Distinations" class="distinations_section">
@@ -100,10 +100,13 @@
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/top_bridge_da_nang.png" alt="ba na image">
-            </div>
-            <!-- <div class="bg_blur">
-                <img src="img/bg_blur.png" alt="">
-            </div> -->
+                <div class="bg_blur"></div>
+
+                <!-- <div class="circle_large">
+                    <img src="img/circle_large.png" alt="">
+                </div> -->
+                
+            </div> 
             <div class="line_list">
                 <div class="circle_main"></div>
                 <div class="dashed-line"></div>
@@ -155,6 +158,7 @@
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/cho_con_img.png" alt="ba na image">
+                <div class="bg_blur"></div>
             </div>
             <div class="line_list">
             <div class="circle_main"></div>
@@ -199,6 +203,7 @@
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/deo_hai_van_img.png" alt="ba na image">
+                <div class="bg_blur"></div>
             </div>
             <div class="line_list">
             <div class="circle_main"></div>
@@ -243,6 +248,7 @@
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/mykhe_bg.png" alt="ba na image">
+                <div class="bg_blur"></div>
             </div>
             <div class="line_list">
             <div class="circle_main"></div>
@@ -284,6 +290,96 @@
                 </div>
             </div>
         </div>
+        <div class="distination_item">
+            <div class="imgBx">
+                <img src="img/chua_linh_ung.jpg" alt="ba na image">
+                <div class="bg_blur"></div>
+            </div>
+            <div class="line_list">
+            <div class="circle_main"></div>
+            <div class="dashed-line"></div>
+            </div>
+            <div class="content">
+                <h2>Chùa Linh Ứng Bãi Bụt - Sơn Trà</h2>
+                <div class="content_list">
+
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Lịch sử hình thành: </strong> <br>
+                        <ul  class="custom-list">
+                            <li><p>Khởi công xây dựng vào năm 2004 và hoàn thành vào năm 2010.</p></li>
+                            <li><p>Chùa Linh Ứng Bãi Bụt, còn được gọi là Chùa Linh Ứng Sơn Trà, là một trong ba ngôi chùa Linh Ứng nổi tiếng của thành phố Đà Nẵng.</p></li>
+                            <li><p>Theo truyền thuyết, nơi đây từng có một tượng Phật trôi dạt vào bờ biển, mang lại bình an và hạnh phúc cho người dân địa phương.</p></li>                       
+                        </ul>
+                    
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Vị trí: </strong> <br>
+                            <ul  class="custom-list">
+                                <li><p>Chùa Linh Ứng Bãi Bụt tọa lạc trên bán đảo Sơn Trà, cách trung tâm thành phố Đà Nẵng khoảng 10 km về phía đông bắc.</p></li>
+                                <li><p>Vị trí đắc địa này mang lại cho chùa một khung cảnh thiên nhiên tuyệt đẹp và không gian thanh bình, tách biệt khỏi sự ồn ào của thành phố.</p></li>
+                                <li><p>Chùa nằm ở độ cao 693 mét so với mực nước biển, nhìn ra biển Đông và thành phố Đà Nẵng.</p></li>
+                            </ul>
+                    </div>
+
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Vẻ đẹp:</strong> <br>
+                            <ul  class="custom-list">
+                                <li><p>Chùa Linh Ứng Bãi Bụt nổi bật với tượng Phật Quan Thế  m cao 67 mét, được xem là tượng Phật cao nhất Việt Nam.</p></li>
+                                <li><p>Tượng được đặt trên một đài sen lớn, nhìn ra biển Đông, biểu tượng cho lòng từ bi và sự bảo hộ cho người dân và ngư dân trong vùng.</p></li>
+                                <li><p>Từ chùa, du khách có thể ngắm nhìn toàn cảnh thành phố Đà Nẵng, bán đảo Sơn Trà và biển Đông rộng lớn, đặc biệt vào lúc bình minh và hoàng hôn.</p></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="distination_item">
+            <div class="imgBx">
+                <img src="img/ba-na-hills.jpg" alt="ba na image">
+                <div class="bg_blur"></div>
+            </div>
+            <div class="line_list">
+            <div class="circle_main"></div>
+            <div class="dashed-line"></div>
+            </div>
+            <div class="content">
+                <h2>Chùa Linh Ứng Bãi Bụt - Sơn Trà</h2>
+                <div class="content_list">
+
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Lịch sử hình thành: </strong> <br>
+                        <ul  class="custom-list">
+                            <li><p>Khu du lịch này có nguồn gốc từ thời Pháp thuộc.</p></li>
+                            <li><p>khi người Pháp phát hiện ra Bà Nà vào đầu thế kỷ 20 và bắt đầu xây dựng nơi đây thành một khu nghỉ dưỡng vào năm 1919.</p></li>
+                            <li><p>Sau nhiều năm bị bỏ hoang, Bà Nà Hills đã được khôi phục và phát triển mạnh mẽ từ năm 2007 bởi tập đoàn Sun Group.</p></li>                       
+                        </ul>
+                    
+                    </div>
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Vị trí: </strong> <br>
+                            <ul  class="custom-list">
+                                <li><p>Bà Nà Hills nằm ở xã Hòa Ninh, huyện Hòa Vang, cách trung tâm thành phố Đà Nẵng khoảng 25 km về phía tây nam.</p></li>
+                                <li><p>Khu du lịch nằm trên đỉnh núi Chúa, ở độ cao 1.487 mét so với mực nước biển.</p></li>
+                                <li><p>Vị trí đặc biệt này mang lại cho Bà Nà Hills khí hậu mát mẻ quanh năm và cảnh quan hùng vĩ, với những rừng thông bạt ngàn và tầm nhìn bao quát xuống toàn cảnh thành phố và biển Đông.                                </p></li>
+                            </ul>
+                    </div>
+
+                    <div class="content_list_text">
+                        <img src="img/circle_stroke.png" alt="">
+                        <p><strong>Vẻ đẹp:</strong> <br>
+                            <ul  class="custom-list">
+                                <li><p>Bà Nà Hills nổi tiếng với vẻ đẹp thiên nhiên hùng vĩ và các công trình kiến trúc ấn tượng.</p></li>
+                                <li><p>Một trong những điểm nhấn nổi bật nhất của Bà Nà Hills là hệ thống cáp treo đạt nhiều kỷ lục thế giới.</p></li>
+                                <li><p>Chuyến cáp treo đưa du khách từ chân núi lên đỉnh Bà Nà với những cảnh quan tuyệt đẹp từ trên cao.                                </p></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- PRICE  -->
     <section id="Foods" class="foods_section">
@@ -318,7 +414,7 @@
                     </div>
                     <div class="card_item_content">
                         <h4>Gỏi cá Nam Ô</h4>
-                        <p class ="item_location"> <img src="img/location.png" alt=""><strong>972 Nguyễn Lương Bằng, Quận Liên Chiểu,Thành Phố Đà Nẵng</strong></p> 
+                        <p class ="item_location"> <img src="img/location.png" alt="icon_location"><strong>972 Nguyễn Lương Bằng, Quận Liên Chiểu,Thành Phố Đà Nẵng</strong></p> 
                         <p class="decription">Món gỏi cá Nam Ô không chỉ ngon miệng mà còn hấp dẫn về mặt thị giác với màu sắc đa dạng từ các loại rau sống, thịt cá trắng ngần và nước chấm đậm đà. Khi ăn, gỏi cá Nam Ô mang đến hương vị tươi mát, giòn giòn của rau, vị ngọt của cá, vị bùi của đậu phộng và mè, cùng với hương vị đậm đà từ nước chấm.</p>
                     </div>
                     <button class="btn_view_more">
@@ -333,7 +429,7 @@
                     </div>
                     <div class="card_item_content">
                         <h4>Quán Đặc Sản Trần</h4>
-                        <p class ="item_location"> <img src="img/location.png" alt=""><strong>11 Nguyễn Văn Linh, Quận Hải Châu, Thành Phố Đà Nẵng</strong></p> 
+                        <p class ="item_location"> <img src="img/location.png" alt="icon_location"><strong>11 Nguyễn Văn Linh, Quận Hải Châu, Thành Phố Đà Nẵng</strong></p> 
                         <p class="decription">Đặc sản Trần không chỉ là nơi để thưởng thức những món ăn truyền thống của Đà Nẵng mà còn là nơi để cảm nhận sự tinh tế và tâm huyết trong từng món ăn. Vị trí thuận lợi, lịch sử hình thành đầy tâm huyết và vẻ đẹp của các món ăn tại Đặc sản Trần đã tạo nên một thương hiệu ẩm thực được nhiều người yêu thích.</p>
                     </div>
                     <button class="btn_view_more">
@@ -348,7 +444,7 @@
                     </div>
                     <div class="card_item_content">
                         <h4>Hải Sản Lão Đại</h4>
-                        <p class ="item_location"> <img src="img/location.png" alt=""><strong>Số 50 Đường 3/2, Quận Hải Châu, Thành Phố Đà Nẵng.</strong></p> 
+                        <p class ="item_location"> <img src="img/location.png" alt="icon_location"><strong>Số 50 Đường 3/2, Quận Hải Châu, Thành Phố Đà Nẵng.</strong></p> 
                         <p class="decription">Hải sản Lão Đại không chỉ nổi bật với những món hải sản tươi ngon, đa dạng mà còn với cách trình bày đẹp mắt và hương vị tuyệt vời. Vị trí thuận lợi, lịch sử hình thành với tâm huyết và đam mê, cùng với vẻ đẹp của các món ăn đã giúp Hải sản Lão Đại trở thành một địa điểm ẩm thực được nhiều người yêu thích tại Đà Nẵng. </p>
                     </div>
                     <button class="btn_view_more">
@@ -356,8 +452,7 @@
 
                         <p>Xem thêm</p>
                     </button>
-                </div>
-                
+                </div>                
             </div>
         </div>
     </section>
@@ -492,7 +587,25 @@
             </div>
         </div>
         <p style="text-align: center; margin-top: 3rem;">© Copyright 2024 by NguyenBaNghi. All right reserved.</p>
-
+<!-- Popup container -->
+<div id="popup" class="popup">
+    <div class="popup_content">
+     <div class="close_btn">
+        <span class="close_btn_icon">&times;</span>
+     </div>
+      <div class="popup_left">
+        <img id="popup_img" src="" alt="">
+      </div>
+      <div class="popup_right">
+        <h2 id="popup_title"></h2>
+        <p id="popup_location"></p>
+        <p id="popup_phone"></p>
+        <p id="popup_email"></p>
+        <a id="popup_fb" href="" target="_blank">Facebook Page</a>
+      </div>
+    </div>
+  </div>
+  
     </footer>
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

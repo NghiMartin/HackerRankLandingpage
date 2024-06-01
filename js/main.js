@@ -187,7 +187,7 @@ function showReview(reviewId, event) {
   event.target.classList.add('active');
 
   // Thêm lớp fade-out trước khi thay đổi nội dung
-  const reviewText = document.getElementById('review-text');
+  const reviewText = document.querySelector('.review-text');
   reviewText.classList.add('fade-out');
 
   // Chờ cho hiệu ứng fade-out hoàn thành, sau đó thay đổi nội dung và thêm lớp fade-in
@@ -222,3 +222,87 @@ document.querySelectorAll('.distination_item').forEach(item => {
 
   console.log({contentHeightLine});
 });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the popup
+    var popup = document.getElementById('popup');
+
+    // Get the <span> element that closes the popup
+    var closeBtn = document.getElementsByClassName('close_btn')[0];
+
+    // Function to open the popup with specific content
+    function openPopup(imgSrc, title, location, phone, email, fbLink) {
+      document.getElementById('popup_img').src = imgSrc;
+      document.getElementById('popup_title').innerText = title;
+      document.getElementById('popup_location').innerText = location;
+      document.getElementById('popup_phone').innerText = phone;
+      document.getElementById('popup_email').innerText = email;
+      document.getElementById('popup_fb').href = fbLink;
+      popup.style.display = 'block';
+    }
+
+    // Close the popup when the user clicks on <span> (x)
+    closeBtn.onclick = function() {
+      popup.style.display = 'none';
+    }
+
+    // Close the popup when the user clicks anywhere outside of the popup
+    window.onclick = function(event) {
+      if (event.target == popup) {
+        popup.style.display = 'none';
+      }
+    }
+
+    // Add event listeners to all "View More" buttons
+    var viewMoreButtons = document.querySelectorAll('.btn_view_more');
+    viewMoreButtons.forEach(function(button, index) {
+      button.addEventListener('click', function() {
+        // Example data for each card (you should replace this with your actual data)
+        var data = [
+          {
+            imgSrc: 'img/cho-dem-helio-1.jpg',
+            title: 'Chợ đêm Helio',
+            location: 'Đường 2/9, Bình Hiên, Quận Hải Châu, Thành Phố Đà Nẵng',
+            phone: '0123456789',
+            email: 'contact@helio.com',
+            fbLink: 'https://www.facebook.com/helio'
+          },
+          {
+            imgSrc: 'img/goi-ca-nam-o.jpg',
+            title: 'Gỏi cá Nam Ô',
+            location: '972 Nguyễn Lương Bằng, Quận Liên Chiểu, Thành Phố Đà Nẵng',
+            phone: '0987654321',
+            email: 'contact@namo.com',
+            fbLink: 'https://www.facebook.com/namo'
+          },
+          {
+            imgSrc: 'img/dacsantran.jpg',
+            title: 'Quán Đặc Sản Trần',
+            location: '11 Nguyễn Văn Linh, Quận Hải Châu, Thành Phố Đà Nẵng',
+            phone: '0345678912',
+            email: 'contact@tran.com',
+            fbLink: 'https://www.facebook.com/tran'
+          },
+          {
+            imgSrc: 'img/nha-hang-lao-dai-seafood-da-nang.jpg',
+            title: 'Hải Sản Lão Đại',
+            location: 'Số 50 Đường 3/2, Quận Hải Châu, Thành Phố Đà Nẵng',
+            phone: '0567891234',
+            email: 'contact@laodai.com',
+            fbLink: 'https://www.facebook.com/laodai'
+          }
+        ];
+
+        // Open the popup with the data corresponding to the clicked button
+        openPopup(
+          data[index].imgSrc,
+          data[index].title,
+          data[index].location,
+          data[index].phone,
+          data[index].email,
+          data[index].fbLink
+        );
+      });
+    });
+  });

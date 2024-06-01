@@ -207,11 +207,11 @@
 }
 /* ABOUT US  */
 .reviews-section {
-  margin-top: 7rem; /* 70px */
+  /* margin-top: 7rem; */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(62, 93, 98, 0.1);
+  background-color: rgba(216, 216, 216, 0.1);
   height: 40rem; 
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); 
 }
@@ -228,30 +228,39 @@
 }
 
 .reviews-section .blockquote_icon img {
-  width: 0.3rem; 
+  width: 4rem; 
   height: auto;
 }
 
 .review-text .info {
-  font-size: 0.09rem; 
+  font-size: 1.2rem; 
   color: #555;
+  padding: 2rem;
 }
 
 .reviews-section-container h2 {
   color: #3E5D62;
+  margin-bottom:2rem;
 }
 
 .review-text p,
 .review-text span {
   color: #3E5D62;
+  max-width: 60rem;
 }
-
+.review-text p{
+  height: 4rem;
+}
 .reviews-section-container blockquote {
   font-style: italic;
   color: #333;
   margin: 2rem 0; 
   opacity: 1;
   transform: translateY(0);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   transition: opacity 0.5s, transform 0.5s;
 }
 
@@ -301,14 +310,8 @@ position: relative;
   margin: auto;
 }
 
-.bg_blur {
-  width: 100%;
-  z-index: 1;
-}
-.bg_blur img {
-  position: absolute;
-  height: auto;
-}
+
+
 .distinations_container_content {
   max-width: 60rem;
 }
@@ -340,7 +343,7 @@ position: relative;
 .distination_item .imgBx
 {
     position: sticky;
-    top: 8.5rem;
+    top: 10.5rem;
     min-width: 50%;
     height: 100vh;
     display: flex;
@@ -350,8 +353,8 @@ position: relative;
 }
 .distination_item:nth-child(2n)  .imgBx {
   justify-content: start;
-
 }
+
 .distination_item .imgBx img{
     width: 90%;
     border-radius: 2rem;
@@ -361,6 +364,41 @@ position: relative;
 .distination_item:nth-child(2n) .imgBx img {
     right: 10%;
 }
+.distination_item .imgBx .bg_blur {
+  position: absolute;
+  z-index: 0;
+  width: 60rem;
+  height: 70rem;
+  border-radius: 50%;
+  background: var(--primary-light-aquamarine); 
+  filter: blur(150px);
+  opacity: 0.5;
+  right: -10rem;
+}
+.distination_item:nth-child(2n)  .imgBx .bg_blur{
+  left: -10rem;
+
+}
+
+/* .distination_item .imgBx .circle_large img {
+  position: absolute;
+  z-index: 0;
+  width: 60rem;
+  height: 60rem;
+  top: 10rem;
+  object-fit: cover;
+  left: -25rem;
+  animation: spin 7s linear infinite;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+} */
 
 .distination_item .line_list {
   display: flex;
@@ -548,24 +586,24 @@ position: relative;
 .card_item_content .item_location strong {
   margin-left: 0.5rem;
   display: -webkit-box;          
-  -webkit-box-orient: vertical;   /* Thiết lập hướng dọc */
-  overflow: hidden;               /* Ẩn nội dung tràn */
-  text-overflow: ellipsis;        /* Thêm dấu ba chấm cho nội dung tràn */
-  -webkit-line-clamp: 1;          /* Giới hạn số dòng hiển thị */
+  -webkit-box-orient: vertical;  
+  overflow: hidden;               
+  text-overflow: ellipsis;        
+  -webkit-line-clamp: 1;         
   max-width: 30rem;  
 }
 
-.card_item_content .item_location img {
-  width: 3rem;
-  height: 2rem;
+.item_location img {
+  width: 2rem;
+  height: auto;
 }
 .card_item_content .decription{
   text-align: left;
   display: -webkit-box;          
-  -webkit-box-orient: vertical;   /* Thiết lập hướng dọc */
-  overflow: hidden;               /* Ẩn nội dung tràn */
-  text-overflow: ellipsis;        /* Thêm dấu ba chấm cho nội dung tràn */
-  -webkit-line-clamp: 3;          /* Giới hạn số dòng hiển thị */
+  -webkit-box-orient: vertical; 
+  overflow: hidden;               
+  text-overflow: ellipsis;     
+  -webkit-line-clamp: 3;      
   max-width: 30rem;  
   font-size: 1.2rem;
   font-weight: normal;
@@ -575,15 +613,15 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 12rem;
+  width: 13rem;
 }
 .btn_view_more:hover{
   opacity: 0.7;
   transition: all 0.4s ease;
 }
 .btn_view_more img{
-  width: 100%;
-  height: 2.272rem;
+  width: auto;
+  height:3rem;
 
 }
 .btn_view_more p{
@@ -800,6 +838,76 @@ border: 1px solid var(--primary-light-aquamarine);
 .cta_section_container button {
   height: 5rem;
 }
+
+/* Popup container */
+.popup {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Popup content */
+.popup_content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  border: 1px solid #888;
+  border-radius: 2rem;
+  width: 80%; 
+  height: 70%;
+  margin-top: 10rem;
+  display: flex;
+  position: relative;
+}
+
+.close_btn {
+  color: #aaa;
+  position: absolute;
+  font-size: 28px;
+  top: 1rem;
+  right: 1rem;
+  font-weight: bold;
+}
+
+.close_btn:hover,
+.close_btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Popup left (image) */
+.popup_left {
+  flex: 1;
+  border-radius: 2rem;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.popup_left img {
+  width: 100%;
+  height:  100%;
+}
+
+.popup_right {
+  flex: 1;
+}
+
+.popup_right h2 {
+  margin-top: 0;
+}
+
+.popup_right p,
+.popup_right a {
+  margin: 10px 0;
+}
+
 
 /* FOOTER  */
 footer {
