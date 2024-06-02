@@ -92,19 +92,41 @@ var home = document.getElementById('Home');
   document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".distination_item");
     const windowHeight = window.innerHeight;
+    const listItems = document.querySelectorAll('.custom-list li');
 
+    const inView = (el) => {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+
+    const checkItemsInView = () => {
+        listItems.forEach((item) => {
+            if (inView(item)) {
+                item.classList.add('in-view');
+            }
+        });
+    };
+
+
+    // Kiểm tra khi tải trang
+    checkItemsInView();
+    
     function checkVisible() {
         sections.forEach(section => {
             const top = section.getBoundingClientRect().top;
-            if (top < windowHeight * 0.5) {
-                section.classList.add("show");
-            } else {
-                section.classList.remove("show");
-            }
+            top < windowHeight * 0.5 ? section.classList.add("show") :  section.classList.remove("show");
         });
+        checkItemsInView();
     }
 
     window.addEventListener("scroll", checkVisible);
+    window.addEventListener('resize', checkItemsInView);
+
 });
 
 
