@@ -22,7 +22,8 @@
 html {
     font-size: 62.5%;
     line-height: 1.6rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins-Black', sans-serif;
+    font-weight: bolder;
     color: var(--text-color);
     background-color: rgba(237, 251, 253,0.4);
 
@@ -31,6 +32,7 @@ html {
 img {
     object-fit: cover;
 }
+
 button{
     width: 12rem;
     background-color: var(--primary-light-aquamarine);
@@ -47,6 +49,8 @@ h1{
 h2{
     font-size: 3rem;
     line-height: 4rem;
+    font-family: 'Poppins-Bold', sans-serif;
+
 
 }
 h4{
