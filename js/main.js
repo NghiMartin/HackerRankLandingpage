@@ -176,29 +176,34 @@ window.onresize = function(event) {
 function showReview(reviewId, event) {
   const reviews = {
     review1: {
-      text: 'The tours in this website are great. I had been really enjoy with my family! The team is very professional and taking care of the customers. Will surely recommend to my friend to join this company!',
-      name: 'Ali Tufan',
-      position: 'Product Manager, Apple Inc.'
+      text: '"Cù Duy Đức là trưởng nhóm tài năng, luôn mang đến tầm nhìn và sự chỉ đạo chiến lược cho nhóm. Với khả năng quản lý dự án và giao tiếp hiệu quả, Văn H đã dẫn dắt nhóm vượt qua nhiều thách thức và đạt được kết quả ấn tượng."',
+      name: 'Cu Duy Duc',
+      position: 'Leader',
+      image: 'img/duy_duc_avt.jpg'
     },
     review2: {
-      text: 'Amazing experience! The tours were well organized and the guides were very knowledgeable.',
-      name: 'John Doe',
-      position: 'Software Engineer, Google Inc.'
+      text: '"Nguyễn Bá Nghị, lập trình viên front-end đầy sáng tạo, chịu trách nhiệm thiết kế và phát triển giao diện người dùng. Với kỹ năng mạnh mẽ trong HTML, CSS, và JavaScript, Nghị đã mang đến cho sản phẩm một giao diện thân thiện và hiện đại."',
+      name: 'Nguyen Ba Nghi',
+      position: 'Front End Developer',
+      image: 'img/ba_nghi_avt.jpg'
     },
     review3: {
-      text: 'A delightful trip with excellent service. Highly recommended!',
-      name: 'Jane Smith',
-      position: 'UX Designer, Facebook'
+      text: '"Nguyễn Tiến Phước là lập trình viên back-end của nhóm, chuyên xử lý logic và quản lý cơ sở dữ liệu. Phước với kiến thức sâu rộng về Python và Java, luôn đảm bảo rằng hệ thống hoạt động một cách trơn tru và bảo mật, đáp ứng tốt các yêu cầu của dự án."',
+      name: 'Nguyen Tien Phuoc',
+      position: 'Back End Developer',
+      image: 'img/tien_phuoc_avt.jpg'
     },
     review4: {
-      text: 'Great tours and fantastic customer service. Will definitely use again!',
-      name: 'Mike Johnson',
-      position: 'Project Manager, Amazon'
+      text: '"Nguyễn Hùng Vĩ là kiểm thử viên đầy nhiệt huyết, tập trung vào kiểm thử chức năng và hiệu suất của sản phẩm. Vĩ sử dụng các kịch bản kiểm thử chi tiết để phát hiện và báo cáo lỗi, đảm bảo chất lượng sản phẩm trước khi phát hành."',
+      name: 'Nguyen Hung Vi',
+      position: 'Tester',
+      image: 'img/hung_vi_avt.jpg'
     },
     review5: {
-      text: 'An unforgettable experience! The team took care of everything.',
-      name: 'Emily Davis',
-      position: 'Data Scientist, Microsoft'
+      text: '"Lê Xuân Thảo là kiểm thử viên với sự chuyên sâu trong kiểm thử tự động. Thảo sử dụng các công cụ kiểm thử hiện đại để đảm bảo rằng các chức năng của sản phẩm được kiểm tra một cách nhanh chóng và chính xác, giảm thiểu sai sót và nâng cao hiệu quả làm việc của nhóm."',
+      name: 'Le Xuan Thao',
+      position: 'Tester',
+      image: 'img/xuan_thao_avt.jpg'
     }
   };
 
@@ -210,23 +215,32 @@ function showReview(reviewId, event) {
 
   // Thêm lớp fade-out trước khi thay đổi nội dung
   const reviewText = document.querySelector('.review-text');
+  const reviewImage = document.querySelector('.review-image');
   reviewText.classList.add('fade-out');
+  reviewImage.classList.add('fade-out');
 
   // Chờ cho hiệu ứng fade-out hoàn thành, sau đó thay đổi nội dung và thêm lớp fade-in
   setTimeout(() => {
     reviewText.querySelector('p').innerText = reviews[reviewId].text;
-    reviewText.querySelector('footer').innerHTML = `${reviews[reviewId].name}<br><span>${reviews[reviewId].position}</span>`;
+    reviewText.querySelector('.info').innerHTML = `${reviews[reviewId].name}<br><span>${reviews[reviewId].position}</span>`;
+
+    // Thay đổi ảnh đại diện
+    reviewImage.src = reviews[reviewId].image;
 
     // Loại bỏ lớp fade-out và thêm lớp fade-in
     reviewText.classList.remove('fade-out');
     reviewText.classList.add('fade-in');
-    
+    reviewImage.classList.remove('fade-out');
+    reviewImage.classList.add('fade-in');
+
     // Loại bỏ lớp fade-in sau một khoảng thời gian để chuẩn bị cho lần thay đổi tiếp theo
     setTimeout(() => {
       reviewText.classList.remove('fade-in');
+      reviewImage.classList.remove('fade-in');
     }, 500);
   }, 500);
 }
+
 
 
 // DISTINATIONS 

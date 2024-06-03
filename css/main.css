@@ -5,8 +5,6 @@
   justify-content: center;
 }
 .header {
-  /* -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px); */
   width: 100%;
   position: fixed;
   z-index: 999;
@@ -214,19 +212,35 @@
   background-color: rgba(216, 216, 216, 0.1);
   height: 40rem; 
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
 }
 
 .reviews-section-container {
   text-align: center;
   padding: 2rem; 
   height: 33rem; 
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 1rem;
+  position: relative;
 }
-
+.reviews-section .bg_blur_left,.bg_blur_right{
+  position: absolute;
+  z-index: 0;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: var(--primary-light-aquamarine); 
+  filter: blur(150px);
+  opacity: 0.6;
+}
+.bg_blur_left{
+  left: 0;
+}
+.bg_blur_right{
+  right: 0;
+}
 .reviews-section .blockquote_icon img {
   width: 4rem; 
   height: auto;
@@ -258,7 +272,7 @@
   opacity: 1;
   transform: translateY(0);
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
   transition: opacity 0.5s, transform 0.5s;
@@ -279,6 +293,25 @@
   transition: border 0.1s;
 }
 
+.review-image {
+  width: 25rem;
+  height: 35rem;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to right, #008da0, #1cd4ec) border-box;
+border: 0.1rem solid transparent;
+border-radius: 2rem;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-image.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.review-image.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
 .avatar.active,
 .avatar:hover {
   border: 0.3rem solid #009cb1; 
@@ -720,7 +753,7 @@ background-color: rgba(255, 255, 255, 0.333);
 }
 .card-items{
   position: relative;
-  padding: 5rem;
+  padding: 4rem ;
   width: 36rem;
   margin: 2rem;
   height: 23rem;
@@ -743,12 +776,14 @@ background-color: rgba(255, 255, 255, 0.333);
 }
 .info {
   margin-left:2rem;
+  font-size: 1.2rem;
 }
   
 .start{
   position: absolute;
   right: 5rem;
   display: flex;
+  font-size: 1.4rem;
   justify-content: center;
   align-items: center;
 }
@@ -765,6 +800,7 @@ background-color: rgba(255, 255, 255, 0.333);
 /* CONTACT  */
 #Contact{
   width: 100%;
+  height: 70rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -777,13 +813,12 @@ background-color: rgba(255, 255, 255, 0.333);
   margin: 5.625rem 0 0 0;
   padding: 2rem;
   border: 0.1rem solid #00b0c7;
-
-  border-radius: 0.625rem;
+  border-radius: 1rem;
   background: transparent;
 }
 .bg_travel {
   width: 100%;
-  height: 50%;
+  height: 100rem;
   z-index: -1;
   opacity: 0.1;
   top: 0;
@@ -838,7 +873,9 @@ background-color: rgba(255, 255, 255, 0.333);
   background-color: transparent;
   color: rgb(254, 253, 253);
 }
-
+.maps iframe{
+  border-radius: 1rem;
+}
 /* EXPERIENCE SECTION */
 .experience_container {
   width: 100% ;
