@@ -818,13 +818,12 @@ background-color: rgba(255, 255, 255, 0.333);
 }
 .bg_travel {
   width: 100%;
-  height: 100rem;
-  z-index: -1;
+  height: 70rem;
+  z-index: ;
   opacity: 0.1;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
-  width: 10rem;
 }
 .container1 h2{
   font-style: normal;
@@ -879,17 +878,15 @@ background-color: rgba(255, 255, 255, 0.333);
 /* EXPERIENCE SECTION */
 .experience_container {
   width: 100% ;
-  height: 54rem;
   color: var(--white-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  z-index: 999;
 }
 .experience_container_content {
   position: absolute;
-  z-index: 2;
 }
 .experience_container_content p {
   color: var(--white-color);
@@ -898,11 +895,9 @@ background-color: rgba(255, 255, 255, 0.333);
   text-align: center;
   font-family: 'Poppins-Light', sans-serif;
 }
-.experience_container_wrapper {
-flex: 1;
-}
 .experience_container img {
   width: 100%;
+  height: auto;
   z-index: 1;
 }
 .containImg {
