@@ -29,7 +29,7 @@ html {
 
 }
 
-img {
+img,video {
     object-fit: cover;
 }
 

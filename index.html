@@ -18,7 +18,7 @@
     <section id="Home" class="hero_section">
         <header class="header">
             <div class="container_header">
-                <a href="#Home"> <img class="logo_img" src="img/Logo.png" alt=""></a>                
+                <a href="#Home"> <img class="logo_img" src="./img/Logo.png" alt=""></a>                
             <nav class="header_nav" >
                     <ul class="header_nav-list">
                         <li class="header_nav-item">
@@ -53,16 +53,19 @@
         </header>
         <div class="hero_section_main">
             <div class="banner">
-                <video autoplay loop muted plays-inline>
+             <div class="video_container">
+                <video class="responsive-video" autoplay loop muted plays-inline>
                     <source src="video_Da_Nang.mp4" type="video/mp4">
                 </video>
+             </div>
                 <div class="content">
-                    <h1>EXPLORE DA NANG CITY WITH <br> HACKER RANK</h1>
+                    <h1>EXPLORE DA NANG CITY WITH HACKER RANK</h1>
                     <div>
                         <button type="button">Explore</button>
                     </div>
                 </div>
             </div>
+            
     </section>
     <!-- ABOUT US  -->
     <div id="AboutUs" data-aos="fade-up">
@@ -109,59 +112,63 @@
                 <img src="img/top_bridge_da_nang.png" alt="ba na image">
                 <div class="bg_blur"></div>
             </div> 
-            <div class="line_list">
-                <div class="circle_main"></div>
-                <div class="dashed-line"></div>
-                </div>
-            <div class="content">
-                <h2>Top các cây cầu của Đà Nẵng</h2>
-                <div class="content_list">
-                    <div class="content_list_text">
-                        <img src="img/circle_stroke.png" alt="circle_stroke">
-                        <p><strong>Cầu Trần Thị Lý: </strong></p>
-                        <ul  class="custom-list">
-                            <li><p>Được khởi công xây dựng lại và hoàn thành vào năm 2013.</p></li>
-                            <li><p>Cầu Trần Thị Lý nằm ở vị trí chiến lược, bắc qua sông Hàn, nối liền hai bờ của thành phố Đà Nẵng.</p></li>
-                            <li><p>Cầu có một nhịp chính dài 731 mét và có độ cao 145 mét.</p></li>
-                            <li><p>Vẻ đẹp của cầu Trần Thị Lý nằm ở thiết kế hiện đại và tinh tế, cầu có một nhịp chính dài 731 mét với cấu trúc dây văng độc đáo.</p></li>
-                        </ul>
+            <div class="wrapper_container">
+                <div class="line_list">
+                    <div class="circle_main"></div>
+                    <div class="dashed-line"></div>
                     </div>
-                    <div class="content_list_text">
-                        <img src="img/circle_stroke.png" alt="circle_stroke">
-                        <p><strong>Cầu Sông Hàn: </strong></p>
-                        <ul  class="custom-list">
-                            <li><p>Được khởi công vào ngày 2 tháng 9 năm 1998 và hoàn thành vào ngày 29 tháng 3 năm 2000, đúng vào dịp kỷ niệm 25 năm giải phóng Đà Nẵng.</p></li>
-                            <li><p>Cầu Sông Hàn bắc qua sông Hàn, nối liền hai quận Hải Châu và Sơn Trà, thuộc trung tâm thành phố Đà Nẵng.</p></li>
-                            <li><p>Cầu Sông Hàn nổi bật với thiết kế cầu quay độc đáo, hệ thống chiếu sáng hiện đại với đèn LED nhiều màu sắc làm cho cầu Sông Hàn trở nên lộng lẫy và huyền ảo vào ban đêm.</p></li>
-                        </ul>
+                <div class="content">
+                    <h2>Top các cây cầu của Đà Nẵng</h2>
+                    <div class="content_list">
+                        <div class="content_list_text">
+                            <img src="img/circle_stroke.png" alt="circle_stroke">
+                            <p><strong>Cầu Trần Thị Lý: </strong></p>
+                            <ul  class="custom-list">
+                                <li><p>Được khởi công xây dựng lại và hoàn thành vào năm 2013.</p></li>
+                                <li><p>Cầu Trần Thị Lý nằm ở vị trí chiến lược, bắc qua sông Hàn, nối liền hai bờ của thành phố Đà Nẵng.</p></li>
+                                <li><p>Cầu có một nhịp chính dài 731 mét và có độ cao 145 mét.</p></li>
+                                <li><p>Vẻ đẹp của cầu Trần Thị Lý nằm ở thiết kế hiện đại và tinh tế, cầu có một nhịp chính dài 731 mét với cấu trúc dây văng độc đáo.</p></li>
+                            </ul>
+                        </div>
+                        <div class="content_list_text">
+                            <img src="img/circle_stroke.png" alt="circle_stroke">
+                            <p><strong>Cầu Sông Hàn: </strong></p>
+                            <ul  class="custom-list">
+                                <li><p>Được khởi công vào ngày 2 tháng 9 năm 1998 và hoàn thành vào ngày 29 tháng 3 năm 2000, đúng vào dịp kỷ niệm 25 năm giải phóng Đà Nẵng.</p></li>
+                                <li><p>Cầu Sông Hàn bắc qua sông Hàn, nối liền hai quận Hải Châu và Sơn Trà, thuộc trung tâm thành phố Đà Nẵng.</p></li>
+                                <li><p>Cầu Sông Hàn nổi bật với thiết kế cầu quay độc đáo, hệ thống chiếu sáng hiện đại với đèn LED nhiều màu sắc làm cho cầu Sông Hàn trở nên lộng lẫy và huyền ảo vào ban đêm.</p></li>
+                            </ul>
+                        </div>
+                        <div class="content_list_text">
+                            <img src="img/circle_stroke.png" alt="circle_stroke">
+                            <p><strong>Cầu Rồng: </strong></p>
+                            <ul  class="custom-list">
+                                <li><p>Chính thức khởi công xây dựng vào ngày 19 tháng 7 năm 2009 và hoàn thành vào ngày 29 tháng 3 năm 2013.</p></li>
+                                <li><p>Cầu Rồng bắc qua sông Hàn, kết nối đường Nguyễn Văn Linh từ sân bay quốc tế Đà Nẵng với đường Võ Văn Kiệt, con đường trực tiếp dẫn ra bãi biển Mỹ Khê nổi tiếng.</p></li>
+                                <li><p>Cầu Rồng nổi bật với thiết kế mang hình dáng con rồng vươn ra biển Đông, biểu tượng của sự phát triển và thịnh vượng.Vào mỗi tối cuối tuần và các ngày lễ, cầu Rồng trở nên sống động với màn trình diễn phun lửa và phun nước, thu hút rất nhiều du khách và người dân địa phương.</p></li>
+                            </ul>
+                        </div>
+                        <div class="content_list_text">
+                            <img src="img/circle_stroke.png" alt="circle_stroke">
+                            <p><strong>Cầu Thuận Phước: </strong></p>
+                            <ul  class="custom-list">
+                                <li><p>Được khánh thành vào năm 2009, cầu Thuận Phước là cây cầu dây võng dài nhất Việt Nam, với chiều dài 1.850 mét.</p></li>
+                                <li><p>Cầu Thuận Phước nằm ở vị trí đắc địa, tại cửa biển sông Hàn, nơi dòng sông gặp biển cả.</p></li>
+                                <li><p>Vẻ đẹp của cầu Thuận Phước được thể hiện qua thiết kế kiến trúc hiện đại và tinh tế. Cầu có hệ thống dây võng chắc chắn, với những cột trụ cao vút, tạo nên một hình ảnh mạnh mẽ và uy nghi.</p></li>
+                            </ul>
+                        </div>
+                        
                     </div>
-                    <div class="content_list_text">
-                        <img src="img/circle_stroke.png" alt="circle_stroke">
-                        <p><strong>Cầu Rồng: </strong></p>
-                        <ul  class="custom-list">
-                            <li><p>Chính thức khởi công xây dựng vào ngày 19 tháng 7 năm 2009 và hoàn thành vào ngày 29 tháng 3 năm 2013.</p></li>
-                            <li><p>Cầu Rồng bắc qua sông Hàn, kết nối đường Nguyễn Văn Linh từ sân bay quốc tế Đà Nẵng với đường Võ Văn Kiệt, con đường trực tiếp dẫn ra bãi biển Mỹ Khê nổi tiếng.</p></li>
-                            <li><p>Cầu Rồng nổi bật với thiết kế mang hình dáng con rồng vươn ra biển Đông, biểu tượng của sự phát triển và thịnh vượng.Vào mỗi tối cuối tuần và các ngày lễ, cầu Rồng trở nên sống động với màn trình diễn phun lửa và phun nước, thu hút rất nhiều du khách và người dân địa phương.</p></li>
-                        </ul>
-                    </div>
-                    <div class="content_list_text">
-                        <img src="img/circle_stroke.png" alt="circle_stroke">
-                        <p><strong>Cầu Thuận Phước: </strong></p>
-                        <ul  class="custom-list">
-                            <li><p>Được khánh thành vào năm 2009, cầu Thuận Phước là cây cầu dây võng dài nhất Việt Nam, với chiều dài 1.850 mét.</p></li>
-                            <li><p>Cầu Thuận Phước nằm ở vị trí đắc địa, tại cửa biển sông Hàn, nơi dòng sông gặp biển cả.</p></li>
-                            <li><p>Vẻ đẹp của cầu Thuận Phước được thể hiện qua thiết kế kiến trúc hiện đại và tinh tế. Cầu có hệ thống dây võng chắc chắn, với những cột trụ cao vút, tạo nên một hình ảnh mạnh mẽ và uy nghi.</p></li>
-                        </ul>
-                    </div>
-                    
                 </div>
             </div>
+            
         </div>
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/cho_con_img.png" alt="ba na image">
                 <div class="bg_blur"></div>
             </div>
+            <div class="wrapper_container">
             <div class="line_list">
             <div class="circle_main"></div>
             <div class="dashed-line"></div>
@@ -202,15 +209,21 @@
                 </div>
             </div>
         </div>
+
+        </div>
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/deo_hai_van_img.png" alt="ba na image">
                 <div class="bg_blur"></div>
             </div>
+
+            <div class="wrapper_container">
+
             <div class="line_list">
             <div class="circle_main"></div>
             <div class="dashed-line"></div>
             </div>
+
             <div class="content">
                 <h2>Đèo Hải Vân</h2>
                 <div class="content_list">
@@ -247,11 +260,15 @@
                 </div>
             </div>
         </div>
+
+        </div>
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/mykhe_bg.png" alt="ba na image">
                 <div class="bg_blur"></div>
             </div>
+
+            <div class="wrapper_container">
             <div class="line_list">
             <div class="circle_main"></div>
             <div class="dashed-line"></div>
@@ -292,11 +309,14 @@
                 </div>
             </div>
         </div>
+        </div>
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/chua_linh_ung.jpg" alt="ba na image">
                 <div class="bg_blur"></div>
             </div>
+            <div class="wrapper_container">
+
             <div class="line_list">
             <div class="circle_main"></div>
             <div class="dashed-line"></div>
@@ -337,11 +357,15 @@
                 </div>
             </div>
         </div>
+
+        </div>
         <div class="distination_item">
             <div class="imgBx">
                 <img src="img/ba-na-hills.jpg" alt="ba na image">
                 <div class="bg_blur"></div>
             </div>
+            <div class="wrapper_container">
+
             <div class="line_list">
             <div class="circle_main"></div>
             <div class="dashed-line"></div>
@@ -381,6 +405,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+
         </div>
     </section>
     
@@ -477,7 +503,6 @@
             <button id="next"><img src="img/next.png" alt=""></button>
         </div>   
     </div>
-  
         <div class="slider">
            <div class="container_list">
             <div class="list">
@@ -561,7 +586,7 @@
                           <input type="tel" placeholder="Số điện thoại*" required id />
                         </div>
                         <div class="form_control">
-                          <input type="text" placeholder="Lời nhắn của bạn cho chúng tôi" />
+                          <input type="text" placeholder="Lời nhắn của bạn cho chúng tôi*" />
                         </div>
                         <div class="submit">
                           <button type="submit">Liên hệ ngay</button>
@@ -586,7 +611,7 @@
     </div>
     
       <!-- /* EXPERIENCE SECTION */ -->
-      <div class="experience_container" data-aos="fade-up" >
+      <div class="experience_container" data-aos="fade-up"  >
            <div class="containImg">
             <img src="img/bg_experience.png" alt="">
            </div>
