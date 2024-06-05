@@ -995,7 +995,13 @@ padding: 2rem;
   max-height: 100%; /* Set the maximum height */
   overflow: auto; /* Add scrollbars if content overflows */
 }
-
+.popup_right::-webkit-scrollbar {
+  display: none;
+}
+.popup_right{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 .popup_right h2 {
   color: #008294;
 }
