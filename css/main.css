@@ -28,6 +28,7 @@
 }
 
 .logo_img {
+  margin-left: 2rem;
   width: 12.7rem;
   height: 3.7rem;
 }
@@ -130,7 +131,7 @@
   background-color: transparent;
 }
 .hamburger-menu.open .bar:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(44deg);
   transform-origin: 10% 10%;
   width: 4rem;
 }
@@ -145,7 +146,7 @@
   transform-origin: 10% 90%;
 }
 
-
+/* HERO SECTION  */
 .hero_section_main {
   width: 100%;
   height: 100vh;
@@ -191,19 +192,7 @@
   width: 100%;
   height: 100vh;
 } */
-@media(min-aspect-ratio: 16/9){
-  .responsive-video{
-      width: 100%;
-      height: 100vh;
-  }
-}
-@media(min-aspect-ratio: 9/16){
-  .responsive-video{
-      width: 100%;
-      height: 100vh;
 
-  }
-}
 .banner .content h1{
   margin-top: 8rem;
   font-size: 8rem;
@@ -922,12 +911,14 @@ background-color: rgba(255, 255, 255, 0.333);
 }
 .experience_container_content {
   position: absolute;
+  width: 100%;
+  text-align: center;
+
 }
 .experience_container_content p {
   color: var(--white-color);
   margin-top: 2rem;
   opacity: 0.7;
-  text-align: center;
   font-family: 'Poppins-Light', sans-serif;
 }
 .experience_container img {
@@ -941,7 +932,6 @@ background-color: rgba(255, 255, 255, 0.333);
 
 /* Popup container */
 .popup {
-  display: none; 
   position: fixed; 
   z-index: 1; 
   left: 0;
@@ -951,17 +941,22 @@ background-color: rgba(255, 255, 255, 0.333);
   overflow: auto; 
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
+  display: none;
+  opacity: 0;
+  transition: all 1s ease;
+
 }
 
-/* Popup content */
+.popup.show{
+  opacity: 1;
+}
 .popup_content {
-  background-color: #fefefe;
-  margin: 0 auto;
+  background:linear-gradient(to bottom, rgb(255, 255, 255) 0%,rgba(219, 255, 253, 1) 100%);
+  margin: auto auto auto auto;
   border: 1px solid #888;
   border-radius: 2rem;
   width: 80%; 
   height: 70%;
-  margin-top: 10rem;
   display: flex;
   position: relative;
 }
@@ -977,7 +972,7 @@ background-color: rgba(255, 255, 255, 0.333);
 
 .close_btn:hover,
 .close_btn:focus {
-  color: black;
+  color: #008294;
   text-decoration: none;
   cursor: pointer;
 }
@@ -985,8 +980,7 @@ background-color: rgba(255, 255, 255, 0.333);
 /* Popup left (image) */
 .popup_left {
   flex: 1;
-  border-radius: 2rem;
-  padding-right: 20px;
+  border-radius: 2rem 0 0 2rem;
   overflow: hidden;
 }
 
@@ -996,18 +990,31 @@ background-color: rgba(255, 255, 255, 0.333);
 }
 
 .popup_right {
+padding: 2rem;
   flex: 1;
+  max-height: 100%; /* Set the maximum height */
+  overflow: auto; /* Add scrollbars if content overflows */
 }
 
 .popup_right h2 {
-  margin-top: 0;
+  color: #008294;
 }
 
-.popup_right p,
-.popup_right a {
+.popup_right {
   margin: 10px 0;
 }
-
+.popup_right i {
+  font-size: 1.4rem;
+  color: #008294;
+}
+.popup_right span {
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+.popup_right .list_info .item_info {
+ list-style: none;
+ margin-top: 2rem;
+}
 
 /* FOOTER  */
 footer {

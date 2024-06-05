@@ -274,23 +274,29 @@ document.querySelectorAll(".distination_item").forEach((item) => {
 document.addEventListener("DOMContentLoaded", function () {
   // Get the popup
   var popup = document.getElementById("popup");
+  var popup_class = document.querySelector(".popup");
 
   // Get the <span> element that closes the popup
   var closeBtn = document.getElementsByClassName("close_btn")[0];
 
   // Function to open the popup with specific content
-  function openPopup(imgSrc, title, location, phone, email, fbLink) {
+  function openPopup(imgSrc, title, location,timeOpen, phone, email, fbLink, description) {
     document.getElementById("popup_img").src = imgSrc;
     document.getElementById("popup_title").innerText = title;
     document.getElementById("popup_location").innerText = location;
+    document.getElementById("popup_time_open").innerText = timeOpen;
     document.getElementById("popup_phone").innerText = phone;
     document.getElementById("popup_email").innerText = email;
-    document.getElementById("popup_fb").href = fbLink;
-    popup.style.display = "block";
+    document.getElementById("popup_fb").innerText = fbLink;
+    document.getElementById("popup_description").innerText = description;
+    popup.style.display = "flex";
+    popup_class.classList.toggle("show");
+
   }
 
   // Close the popup when the user clicks on <span> (x)
   closeBtn.onclick = function () {
+    popup_class.classList.toggle("show");
     popup.style.display = "none";
   };
 
@@ -298,6 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.onclick = function (event) {
     if (event.target == popup) {
       popup.style.display = "none";
+    popup_class.classList.toggle("show");
     }
   };
 
@@ -311,33 +318,69 @@ document.addEventListener("DOMContentLoaded", function () {
           imgSrc: "img/cho-dem-helio-1.jpg",
           title: "Chợ đêm Helio",
           location: "Đường 2/9, Bình Hiên, Quận Hải Châu, Thành Phố Đà Nẵng",
-          phone: "0123456789",
-          email: "contact@helio.com",
-          fbLink: "https://www.facebook.com/helio",
+          timeOpen: "17:30 - 22:30",
+          phone: "0905 335 358",
+          email: "truyenthonghelio@gmail.com",
+          fbLink: "https://www.facebook.com/Helionightmarket",
+          description: `◉ Chợ đêm Helio nổi bật với không gian rộng rãi, được trang trí ánh sáng rực rỡ và phong cách thiết kế hiện đại. Những gian hàng được bày biện bắt mắt, kết hợp với âm nhạc sôi động, tạo nên một không khí vui tươi và náo nhiệt. Các sự kiện và chương trình biểu diễn thường xuyên được tổ chức tại đây, thu hút đông đảo người tham gia. 
+          
+          ◉ Ẩm thực là điểm nhấn chính của chợ đêm Helio, với hàng trăm gian hàng phục vụ đa dạng các món ăn từ truyền thống đến hiện đại. Một số loại ẩm thực nổi bật tại chợ đêm Helio: 
+          ★	Món ăn truyền thống Việt Nam 
+          ★	Đồ nướng và hải sản 
+          ★	Đồ ăn vặt và thức uống 
+          ★	Ẩm thực quốc tế.
+          
+          ◉ Chợ đêm Helio không chỉ là nơi để thưởng thức ẩm thực, mà còn là một điểm đến để khám phá văn hóa và phong cách sống của Đà Nẵng. Với sự kết hợp hài hòa giữa truyền thống và hiện đại, chợ đêm Helio đã và đang góp phần làm phong phú thêm trải nghiệm du lịch tại thành phố này.
+          `
         },
         {
           imgSrc: "img/goi-ca-nam-o.jpg",
           title: "Gỏi cá Nam Ô",
           location: "972 Nguyễn Lương Bằng, Quận Liên Chiểu, Thành Phố Đà Nẵng",
-          phone: "0987654321",
+          timeOpen: "09:00 - 20:00",
+          phone: "0987 654 321",
           email: "contact@namo.com",
           fbLink: "https://www.facebook.com/namo",
+          description: `◉ Gỏi cá Nam Ô được chế biến từ những con cá tươi ngon, thường là cá trích hoặc cá mòi, được lọc bỏ xương và thái mỏng. Điểm đặc biệt của món gỏi cá này là sự kết hợp hài hòa giữa các loại rau sống, các loại gia vị và nước chấm đặc trưng.
+          
+          ◉ Món gỏi cá Nam Ô không chỉ ngon miệng mà còn hấp dẫn về mặt thị giác với màu sắc đa dạng từ các loại rau sống, thịt cá trắng ngần và nước chấm đậm đà. Khi ăn, gỏi cá Nam Ô mang đến hương vị tươi mát, giòn giòn của rau, vị ngọt của cá, vị bùi của đậu phộng và mè, cùng với hương vị đậm đà từ nước chấm.
+          
+          ◉ Gỏi cá Nam Ô không chỉ là một món ăn đặc sản của Đà Nẵng mà còn là một phần không thể thiếu trong văn hóa ẩm thực của người dân nơi đây. Vị trí địa lý, lịch sử hình thành và cách chế biến tinh tế đã tạo nên một món ăn đậm đà bản sắc, thể hiện sự kết hợp hoàn hảo giữa biển cả và đất liền.
+          `
+
         },
         {
           imgSrc: "img/dacsantran.jpg",
           title: "Quán Đặc Sản Trần",
+          timeOpen: "08:00 - 20:00",
           location: "11 Nguyễn Văn Linh, Quận Hải Châu, Thành Phố Đà Nẵng",
-          phone: "0345678912",
-          email: "contact@tran.com",
-          fbLink: "https://www.facebook.com/tran",
+          phone: "0905 003 122",
+          email: "tran@amthuctran.vn",
+          fbLink: "https://www.facebook.com/amthuctran",
+          description: `◉ Đặc sản Trần được thành lập vào những năm 2000 bởi bà Trần Thị Mai và nhanh chóng trở thành một thương hiệu nổi tiếng trong lĩnh vực ẩm thực Đà Nẵng. 
+          
+          ◉ Bà Mai, người sáng lập, đã có nhiều năm kinh nghiệm trong ngành ẩm thực và mong muốn mang đến cho thực khách những món ăn truyền thống, đậm đà hương vị miền Trung. 
+          
+          ◉ Đặc sản Trần không chỉ là nơi để thưởng thức những món ăn truyền thống của Đà Nẵng mà còn là nơi để cảm nhận sự tinh tế và tâm huyết trong từng món ăn. Vị trí thuận lợi, lịch sử hình thành đầy tâm huyết và vẻ đẹp của các món ăn tại Đặc sản Trần đã tạo nên một thương hiệu ẩm thực được nhiều người yêu thích. 
+          `
         },
         {
           imgSrc: "img/nha-hang-lao-dai-seafood-da-nang.jpg",
           title: "Hải Sản Lão Đại",
           location: "Số 50 Đường 3/2, Quận Hải Châu, Thành Phố Đà Nẵng",
-          phone: "0567891234",
+          timeOpen: "08:00 - 20:00",
+          phone: "0966 666 895",
           email: "contact@laodai.com",
-          fbLink: "https://www.facebook.com/laodai",
+          fbLink: "https://www.facebook.com/LaoDaiDaNang",
+          description: `◉ Kể từ khi thành lập, nhà hàng đã không ngừng phát triển và mở rộng, trở thành một trong những điểm đến ưa thích của những người yêu hải sản. Với đội ngũ đầu bếp chuyên nghiệp và giàu kinh nghiệm, Hải sản Lão Đại luôn đảm bảo chất lượng và hương vị tuyệt vời cho từng món ăn.
+          
+          ◉ Các món ăn tại Hải sản Lão Đại không chỉ ngon miệng mà còn được trình bày đẹp mắt, phản ánh sự tinh tế và công phu trong cách chế biến.Một số món ăn nổi bật bao gồm:
+          ★	Tôm hùm nướng bơ tỏi           
+          ★	Cua rang me
+          ★	Mực nướng sa tế
+          ★	Hàu nướng phô mai
+          ◉ Hải sản Lão Đại không chỉ nổi bật với những món hải sản tươi ngon, đa dạng mà còn với cách trình bày đẹp mắt và hương vị tuyệt vời. Vị trí thuận lợi, lịch sử hình thành với tâm huyết và đam mê, cùng với vẻ đẹp của các món ăn đã giúp Hải sản Lão Đại trở thành một địa điểm ẩm thực được nhiều người yêu thích tại Đà Nẵng. 
+          `
         },
       ];
 
@@ -346,9 +389,12 @@ document.addEventListener("DOMContentLoaded", function () {
         data[index].imgSrc,
         data[index].title,
         data[index].location,
+        data[index].timeOpen,
         data[index].phone,
         data[index].email,
-        data[index].fbLink
+        data[index].fbLink,
+        data[index].description,
+
       );
     });
   });

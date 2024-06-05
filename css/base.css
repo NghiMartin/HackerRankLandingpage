@@ -54,7 +54,8 @@ h2{
 
 }
 h4{
-    font-size: 2rem;
+    font-size: 1.6rem;
+    color: var(--primary-light-aquamarine);
 }
 p{
  font-size: 1.4rem;  

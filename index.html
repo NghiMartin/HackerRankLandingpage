@@ -664,7 +664,7 @@
         </div>
         <p style="text-align: center; margin-top: 3rem; color: white;">© Copyright 2024 by HACKERRANK All rights reserved.</p>
     </footer>
-    
+    <!-- POP UP -->
     <div id="popup" class="popup">
         <div class="popup_content">
          <div class="close_btn">
@@ -675,10 +675,15 @@
           </div>
           <div class="popup_right">
             <h2 id="popup_title"></h2>
-            <p id="popup_location"></p>
-            <p id="popup_phone"></p>
-            <p id="popup_email"></p>
-            <a id="popup_fb" href="" target="_blank">Facebook Page</a>
+            <ul class="list_info">
+                <li class="item_info" ><i class="fa-solid fa-location-dot"></i><span id="popup_location"></span></li>
+                <li class="item_info"><i class="fa-regular fa-calendar-days"></i class="item_info"> <span id="popup_time_open"></p> </span></li>
+                <li class="item_info"><i class="fa-solid fa-phone"></i><span id="popup_phone"></span></li>
+                <li class="item_info"><i class="fa-solid fa-envelope"></i><span id="popup_email"></span></li>
+                <li class="item_info"><i class="fa-brands fa-facebook-f"></i> <span id="popup_fb" href="" target="_blank">Facebook Page</span></li>
+                <li class="item_info"><h4>Vẻ đẹp và ẩm thực: </h4> <br> <p id="popup_description" href="" target="_blank"></p></li>
+            </ul>
+            <p></p>
           </div>
         </div>
       </div>
