@@ -102,9 +102,11 @@
   color: rgb(254, 253, 253);
 }
 
+
+
 .hamburger-menu {
   position: absolute;
-  right: 0;
+  right: 2rem;
   top: 50%;
   transform: translate(0,-50%);
   height: 5rem;
@@ -123,6 +125,26 @@
   transition: 0.4s;
   border-radius: 0.2rem;
 }
+
+.hamburger-menu.open {
+  background-color: transparent;
+}
+.hamburger-menu.open .bar:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+  width: 4rem;
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+  width: 4rem;
+  transform: rotate(-44deg);
+  transform-origin: 10% 90%;
+}
+
 
 .hero_section_main {
   width: 100%;
