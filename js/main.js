@@ -184,7 +184,7 @@ window.onresize = function (event) {
 function showReview(reviewId, event) {
   const reviews = {
     review1: {
-      text: '"Cù Duy Đức là trưởng nhóm tài năng, luôn mang đến tầm nhìn và sự chỉ đạo chiến lược cho nhóm. Với khả năng quản lý dự án và giao tiếp hiệu quả, Văn H đã dẫn dắt nhóm vượt qua nhiều thách thức và đạt được kết quả ấn tượng."',
+      text: '"Cù Duy Đức là trưởng nhóm tài năng, luôn mang đến tầm nhìn và sự chỉ đạo chiến lược cho nhóm. Với khả năng quản lý dự án và giao tiếp hiệu quả, Duy Đức đã dẫn dắt nhóm vượt qua nhiều thách thức và đạt được kết quả ấn tượng."',
       name: "Cu Duy Duc",
       position: "Leader",
       image: "img/duy_duc_avt.jpg",
